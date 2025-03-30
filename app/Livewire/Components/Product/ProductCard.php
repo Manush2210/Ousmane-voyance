@@ -15,7 +15,7 @@ class ProductCard extends Component
 
     public $slug;
 
-    public function mount($images, $title, $price, $slug, Product $product)
+    public function mount($images, $title, $price, $slug)
     {
         $this->slug = $slug;
         $this->product = Product::where('slug', $slug)->first();
