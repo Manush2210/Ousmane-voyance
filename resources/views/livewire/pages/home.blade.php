@@ -6,7 +6,7 @@
         <div class="py-12 mx-auto text-center">
             <h2 class="text-4xl mb-3 text-red-500 italic font-semibold underline font-['Playfair_Display']">Bienvenue
                 chez
-                BIENVEILLANCE ET AMOUR
+              VOYANCE ET  BIENVEILLANCE
             </h2>
             <p class="text-gray-500 text-lg">
                 "Bienvenue dans mon univers ! Je suis Caroline, cartomancienne et créatrice d'oracles. je vous invite à
