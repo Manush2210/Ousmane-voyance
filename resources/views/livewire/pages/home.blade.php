@@ -25,36 +25,33 @@
 
             </h2>
             <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-0">
-                @if ($products && $products->count() > 0)
-
-                    @foreach ($products as $item)
-                        {{-- @dump($item) --}}
-                        @livewire(
-                            'components.product.product-card',
-                            [
-                                'images' => $item->images,
-                                'title' => $item->name,
-                                'price' => $item->price,
-                                'slug' => $item->slug,
-                            ],
-                            key($item->id)
-                        )
-                    @endforeach
-                @else
-                    <div class="col-span-2 md:col-span-3 lg:col-span-4 text-2xl font-semibold text-center">
-                        <p class="text-gray-500">Aucun produit trouvé.</p>
-                    </div>
-                @endif
 
 
-
-
-
+                @foreach ($products as $item)
+                    {{-- @dump($item) --}}
+                    @livewire(
+                        'components.product.product-card',
+                        [
+                            'images' => $item->images,
+                            'title' => $item->name,
+                            'price' => $item->price,
+                            'slug' => $item->slug,
+                        ],
+                        key($item->id)
+                    )
+                @endforeach
             </div>
 
-
-
+            @if ($products->isEmpty())
+                <div class="text-center py-8">
+                    <h3 class="text-sm text-gray-600">Aucun produit</h3>
+                    <p class="text-gray-500">Nous n'avons pas trouvé de produits correspondant à votre recherche.</p>
+                </div>
+            @endif
         </div>
+
+
+
 
     </section>
 
