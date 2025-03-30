@@ -41,7 +41,7 @@
                         )
                     @endforeach
                 @else
-                    <div class="col-span-2 md:col-span-3 lg:col-span-4">
+                    <div class="col-span-2 md:col-span-3 lg:col-span-4 text-2xl font-semibold text-center">
                         <p class="text-gray-500">Aucun produit trouvé.</p>
                     </div>
                 @endif

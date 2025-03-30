@@ -21,12 +21,10 @@
 
 
                 @empty
-                    @livewire('components.product.product-card', [
-                        'images' => ['https://example.com/image1.jpg'],
-                        'title' => 'Les Chuchotements du Cœur',
-                        'price' => 45.99,
-                        'slug' => 'les-chuchotements-du-coeur',
-                    ])
+                <div class="text-center">
+                    <h3 class="text-2xl text-gray-600">Aucun produit trouvé</h3>
+                    <p class="text-gray-500">Nous n'avons pas trouvé de produits correspondant à votre recherche.</p>
+                </div>
                 @endforelse
 
 
@@ -58,15 +56,12 @@
                         ],
                         key($item->id)
                     )
-
-
                 @empty
-                    @livewire('components.product.product-card', [
-                        'images' => ['https://example.com/image1.jpg'],
-                        'title' => 'Les Chuchotements du Cœur',
-                        'price' => 45.99,
-                        'slug' => 'les-chuchotements-du-coeur',
-                    ])
+                    {{-- No product found --}}
+                    <div class="text-center">
+                        <h3 class="text-2xl text-gray-600">Aucun produit trouvé</h3>
+                        <p class="text-gray-500">Nous n'avons pas trouvé de produits correspondant à votre recherche.</p>
+                    </div>
                 @endforelse
 
 

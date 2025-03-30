@@ -133,6 +133,7 @@
                                         <div class="mb-6 p-4 bg-gray-50 border border-gray-200 rounded-lg">
                                             <h4 class="font-semibold text-lg mb-3 text-gray-700">Informations bancaires pour le paiement</h4>
                                             <div class="space-y-2">
+                                                @if ($account != null)
                                                 <div class="flex">
                                                     <span class="w-20 font-medium text-gray-500">Nom:</span>
                                                     <span class="text-slate-700 uppercase">{{ $account->owner }}</span>
@@ -145,6 +146,14 @@
                                                     <span class="w-20 font-medium text-gray-500">SWIFT:</span>
                                                     <span class="text-slate-700 font-mono uppercase">{{ $account->swift }}</span>
                                                 </div>
+                                                @else
+                                                    <div class="flex">
+                                                        <span class="w-20 font-medium text-gray-500">Banque:</span>
+                                                        <span class="text-slate-700 uppercase">Non disponible contactez nous</span>
+                                                    </div>
+
+                                                @endif
+
                                             </div>
                                             <p class="mt-3 text-sm text-gray-500">Veuillez effectuer votre paiement à ce compte et télécharger la preuve de paiement ci-dessous.</p>
                                         </div>
