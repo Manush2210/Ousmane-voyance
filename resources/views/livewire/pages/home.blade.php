@@ -36,7 +36,7 @@
                                 'title' => $item->name,
                                 'price' => $item->price,
                                 'slug' => $item->slug,
-                                'product' => $item,
+
                             ],
                             key($item->id)
                         )

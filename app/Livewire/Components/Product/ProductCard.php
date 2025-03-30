@@ -18,7 +18,8 @@ class ProductCard extends Component
     public function mount($images, $title, $price, $slug)
     {
         $this->slug = $slug;
-        $this->product = Product::where('slug', $slug)->first();
+        if($this->slug == null) {
+            $this->product = Product::where('slug', $slug)->first();
         if (!$this->product) {
             abort(404);
         }
@@ -28,6 +29,8 @@ class ProductCard extends Component
         $this->images = $images;
         $this->title = $title;
         $this->price = $price;
+        }
+
     }
 
     public function addToCart($productId, $quantity = 1)
