@@ -6,7 +6,15 @@
         <meta name="csrf-token" content="{{ csrf_token() }}">
         <link rel="icon" type="image/x-icon" href="{{ asset('assets/images/layout/logo.webp') }}">
 
-        <title>{{ $title ?? 'Page Title' }}</title>
+        <!-- Open Graph / Social Media Meta Tags -->
+        <meta property="og:site_name" content="Voyance et Bienveillance">
+        <meta property="og:title" content="{{ $title ?? 'Page Title' }}">
+        <meta property="og:description" content="{{ $description ?? 'Voyance et Bienveillance - Services de voyance en ligne' }}">
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="{{ url()->current() }}">
+        <meta property="og:image" content="{{ $ogImage ?? asset('assets/images/layout/logo.webp') }}">
+
+        <title>{{ $title ?? 'Voyance et Bienveillance' }}</title>
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
     <body>
