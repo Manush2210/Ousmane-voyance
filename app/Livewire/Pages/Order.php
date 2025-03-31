@@ -299,7 +299,7 @@ class Order extends Component
                 $orderWithItems = OrderModel::with('items')->find($order->id);
 
                 // Email à l'administrateur
-                Mail::to('1motpourmoi@gmail.com')
+                Mail::to('support@voyanceetbienveillance.com')
                     ->send(new OrderAdminNotification($orderWithItems));
 
                 // Email au client

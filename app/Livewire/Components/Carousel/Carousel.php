@@ -58,7 +58,7 @@ class Carousel extends Component
         $randomSlides = [];
 
         // Generate 3-5 random slides
-        $numSlide = 4;
+        $numSlide = 5;
 
         for ($i = 1; $i < $numSlide; $i++) {
             // Using Picsum Photos for random placeholder images

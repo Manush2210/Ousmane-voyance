@@ -32,7 +32,7 @@ class Contact extends Component
         $this->validate();
 
         try {
-            Mail::to('1motpourmoi@gmail.com')->send(new ContactFormMail([
+            Mail::to('support@voyanceetbienveillance.com')->send(new ContactFormMail([
                 'name' => $this->name,
                 'email' => $this->email,
                 'message' => $this->message

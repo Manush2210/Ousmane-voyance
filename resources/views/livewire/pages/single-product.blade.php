@@ -40,21 +40,21 @@
             <!-- Boutons -->
             <div class="mt-6 flex space-x-4 items-center">
                 <div class="flex items-center">
-                    <input type="number" value="1" class="qty-selector border-gray-300 bg-gray-200 w-10 h-10 text-center [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none">
+                    <input type="number" value="1" wire:model.live='quantity' class="qty-selector border-gray-300 bg-gray-200 w-10 h-10 text-center [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none">
                     <div class="flex flex-col ml-1 space-y-3">
-                        <button class="bg-gray-300 cursor-pointer hover:bg-gray-400 text-gray-800 px-1 text-xs rounded-t" wire:click="$set('quantity', $event.target.previousElementSibling?.value ? parseInt($event.target.previousElementSibling.value) + 1 : 2)">
+                        <button wire:click="increment" class="bg-gray-300 cursor-pointer hover:bg-gray-400 text-gray-800 px-1 text-xs rounded-t" wire:click="$set('quantity', $event.target.previousElementSibling?.value ? parseInt($event.target.previousElementSibling.value) + 1 : 2)">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m6-3H6" />
                             </svg>
                         </button>
-                        <button class="bg-gray-300 cursor-pointer hover:bg-gray-400 text-gray-800 px-1 text-xs rounded-b" wire:click="$set('quantity', $event.target.previousElementSibling?.previousElementSibling?.previousElementSibling?.value > 1 ? parseInt($event.target.previousElementSibling.previousElementSibling.previousElementSibling.value) - 1 : 1)">
+                        <button wire:click="decrement" class="bg-gray-300 cursor-pointer hover:bg-gray-400 text-gray-800 px-1 text-xs rounded-b" wire:click="$set('quantity', $event.target.previousElementSibling?.previousElementSibling?.previousElementSibling?.value > 1 ? parseInt($event.target.previousElementSibling.previousElementSibling.previousElementSibling.value) - 1 : 1)">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 12H6" />
                             </svg>
                         </button>
                     </div>
                 </div>
-                <button wire:click="addToCart" class="bg-red-600 text-white px-6 py-3 rounded-lg hover:bg-red-700 transition">
+                <button wire:click="addToCart({{ $product['id'] }})" class="bg-red-600 text-white px-6 py-3 rounded-lg hover:bg-red-700 transition">
                     Ajouter au panier
                 </button>
                 <button class="border border-red-600 text-red-600 px-6 py-3 rounded-lg hover:bg-red-100 transition">

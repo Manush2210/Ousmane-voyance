@@ -8,7 +8,7 @@ use Livewire\Component;
 
 class ProductCard extends Component
 {
-    public Product  $product;
+    public $product;
     public $images;
     public $title;
     public $price;
@@ -18,7 +18,7 @@ class ProductCard extends Component
     public function mount($images, $title, $price, $slug)
     {
         $this->slug = $slug;
-        if($this->slug == null) {
+        if($this->slug !== null) {
             $this->product = Product::where('slug', $slug)->first();
         if (!$this->product) {
             abort(404);

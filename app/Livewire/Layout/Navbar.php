@@ -7,9 +7,14 @@ use Livewire\Attributes\On;
 
 class Navbar extends Component
 {
+
+    public $search='';
     public $isMenuOpen = false;
     public $cartItemCount = 0;
     public $cartItems = [];
+    public $popularSearches = [
+        'cartes', 'tarot', 'pendule', 'oracle'
+    ];
 
     public $topBarItems = [
         'Cartes et Jeux Divinatoires',
@@ -19,7 +24,7 @@ class Navbar extends Component
 
     public $currentTopBarItemIndex = 0;
 
-    public function mount()
+    public function mount(): void
     {
         $this->startTopBarCarousel();
         $this->updateCartData();

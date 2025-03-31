@@ -7,7 +7,7 @@
     <!-- Informations produit -->
     <div class="flex-1">
         <h2 class="text-lg font-bold text-red-700">
-            <a href="#" class="hover:underline">{{ $title}}</a>
+            <a href="{{route('single-product',['slug'=>$slug])}}" class="hover:underline">{{ $title}}</a>
         </h2>
         <p class="text-gray-700 text-md font-semibold">{{ number_format($price, 2, ',', ' ') }} €</p>
         <p class="text-gray-600 text-sm mt-2 line-clamp-3">{{ $description }}</p>
@@ -17,7 +17,7 @@
 
         <!-- Boutons -->
         <div class="mt-3 flex space-x-2">
-            <button wire:click="addToCart" class="bg-red-600 text-white px-4 py-2 rounded-lg text-sm hover:bg-red-700">
+            <button  wire:click="addToCart({{ $product->id }})" class="bg-red-600 text-white px-4 py-2 rounded-lg text-sm hover:bg-red-700">
                 Ajouter au panier
             </button>
             <button class="border border-red-600 text-red-600 px-4 py-2 rounded-lg text-sm hover:bg-red-100">

@@ -15,7 +15,7 @@
         </div>
 
         <div class="mt-auto pt-4 flex justify-center items-baseline">
-            <button wire:click="addToCart({{ $product->id ?? 0 }})"
+            <button wire:click="addToCart({{ $product->id }})"
                 class="bg-red-600 text-white px-4 py-2 rounded-lg hover:bg-red-700 transition">
                 Ajouter au panier
             </button>

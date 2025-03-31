@@ -241,9 +241,12 @@ class Meeting extends Component
             ->send(new AppointmentConfirmation($appointment, $slot));
 
         // Envoyer un email de notification à l'admin
-        Mail::to('1motpourmoi@gmail.com')
+        Mail::to('support@voyanceetbienveillance.com')
             ->send(new AdminAppointmentNotification($appointment, $slot));
-
+        $this->dispatch('showToast', [
+            'message' => 'Rendez-vous réservé avec succès! Un email de confirmation vous a été envoyé.',
+            'type' => 'success'
+        ]);
         // Réinitialiser les champs
         $this->reset(['clientName', 'clientEmail', 'clientPhone', 'notes', 'selectedTimeSlot', 'paymentProof']);
         $this->loadBookedDates();

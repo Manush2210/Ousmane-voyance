@@ -4,7 +4,8 @@
     <header class="container">
         @livewire('components.carousel.carousel')
         <div class="py-12 mx-auto text-center">
-            <h2 class="text-4xl mb-3 text-red-500 italic font-semibold underline font-['Playfair_Display']">Bienvenue
+            <h2 class="text-4xl mb-3 text-red-500 italic font-semibold underline font-['Playfair_Display']">
+                Bienvenue
                 chez
                 VOYANCE ET BIENVEILLANCE
             </h2>

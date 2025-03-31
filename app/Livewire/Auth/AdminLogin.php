@@ -22,7 +22,7 @@ class AdminLogin extends Component
 
         if (Auth::attempt(['email' => $this->email, 'password' => $this->password, 'role' => 'admin'], $this->remember)) {
             session()->regenerate();
-            return redirect()->intended(route('admin.home'));
+            return redirect()->intended(route('admin.orders'));
         }
 
         session()->flash('error', 'Identifiants incorrects ou accès non autorisé.');
