@@ -63,26 +63,26 @@
     </div>
 
     <!-- Vue Mobile -->
-    <div class="md:hidden space-y-4 max-w-screen">
+    <div class="md:hidden space-y-4 w-full">
         @foreach ($mobileProducts as $product)
-            <div class="bg-gray-800 max-w-fit rounded-lg overflow-hidden">
+            <div class="bg-gray-800 w-full rounded-lg overflow-hidden">
                 <img src="{{ Storage::url($product->images[0] ?? '') }}" alt="{{ $product->name }}"
                     class="w-full h-48 object-cover">
                 <div class="p-4">
-                    <h4 class="text-white text-lg font-semibold mb-2">{{ $product->name }}</h4>
-                    <p class="text-gray-400 text-sm mb-4">{{ Str::limit($product->description, 100) }}</p>
+                    <h4 class="text-white text-lg font-semibold mb-2 break-words">{{ $product->name }}</h4>
+                    <p class="text-gray-400 text-sm mb-4 break-words">{{ Str::limit($product->description, 100) }}</p>
                     <div class="flex items-center justify-between mb-4">
                         <span class="text-white font-bold text-xl">{{ number_format($product->price, 2) }} €</span>
                         <span class="text-gray-400">Stock: {{ $product->stock }}</span>
                     </div>
                     <div class="flex gap-2 justify-end">
                         <button wire:click="$dispatch('openModal', { productId: {{ $product->id }} })"
-                            class="flex-1 bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600">
+                            class="flex-1 bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 text-sm">
                             Modifier
                         </button>
                         <button wire:click="deleteProduct({{ $product->id }})"
                             onclick="return confirm('Êtes-vous sûr de vouloir supprimer ce produit ?')"
-                            class="flex-1 bg-red-500 text-white px-4 py-2 rounded-md hover:bg-red-600">
+                            class="flex-1 bg-red-500 text-white px-4 py-2 rounded-md hover:bg-red-600 text-sm">
                             Supprimer
                         </button>
                     </div>
