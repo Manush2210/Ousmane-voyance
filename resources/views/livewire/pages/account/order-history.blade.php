@@ -14,6 +14,13 @@
 
         <div class="bg-white rounded-lg shadow-sm p-6">
             <h2 class="text-2xl font-semibold mb-6">Mes commandes</h2>
+            {{-- Sucess Message if session has new-order --}}
+            @if (session('new-order'))
+                <div class="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative mb-4"
+                     role="alert">
+                    <strong class="font-bold">Commande passée avec succès !</strong>
+                    <span class="block sm:inline">Merci pour votre achat.</span>
+                </div>
 
             @if($orders->isEmpty())
                 <div class="text-center py-8">

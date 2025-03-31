@@ -26,6 +26,15 @@
             <a href="{{ route('meeting') }}"
                 class="bg-red-500 text-white px-4 py-2 rounded-md hover:bg-red-600 transition duration-300">Prendre
                 rendez-vous</a>
+
+            @auth
+                {{-- Bouton mes commandes --}}
+
+                <a href="{{ route('order-history') }}"
+                    class="bg-red-500 text-white px-4 py-2 rounded-md hover:bg-red-600 transition duration-300">Mes
+                    commandes</a>
+
+            @endauth
         </div>
     </header>
 

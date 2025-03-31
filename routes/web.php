@@ -34,7 +34,7 @@ Route::post('/logout', function () {
     session()->invalidate();
     session()->regenerateToken();
     return redirect('/');
-})->middleware('auth')->name('logout');
+})->middleware(['auth', 'web'])->name('logout');
 
 // Routes protégées par l'authentification
 Route::middleware('auth')->group(function () {

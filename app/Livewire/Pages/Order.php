@@ -324,8 +324,8 @@ class Order extends Component
                 'type' => 'success'
             ]);
 
-            // Rediriger vers la confirmation
-            return redirect()->route('home');
+            // Rediriger vers la confirmation with success message new-order
+            return redirect()->route('order-history')->with('new-order', 'Votre commande a été créée avec succès. Un mail de confirmation vous a été envoyé.');
         });
     }
 

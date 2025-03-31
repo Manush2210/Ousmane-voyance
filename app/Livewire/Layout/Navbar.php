@@ -115,6 +115,15 @@ class Navbar extends Component
         $this->isMenuOpen = !$this->isMenuOpen;
     }
 
+    public function logout()
+    {
+        auth()->logout();
+        session()->invalidate();
+        session()->regenerateToken();
+
+        return redirect()->route('home');
+    }
+
     public function render()
     {
         return view('livewire.layout.navbar');
