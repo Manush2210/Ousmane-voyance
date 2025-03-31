@@ -17,23 +17,19 @@
         </div>
 
         {{-- Quick access button to shop, contact and meeting page on mobile --}}
-        <div class="flex justify-center gap-4 mb-8 md:hidden">
+        <div class="flex flex-wrap justify-center gap-2 mb-8 md:hidden">
             <a href="{{ route('shop') }}"
-                class="bg-red-500 text-white px-4 py-2 rounded-md hover:bg-red-600 transition duration-300">Boutique</a>
+                class="bg-red-500 text-white px-3 py-2 text-sm rounded-md hover:bg-red-600 transition duration-300">Boutique</a>
 
             <a href="{{ route('contact') }}"
-                class="bg-red-500 text-white px-4 py-2 rounded-md hover:bg-red-600 transition duration-300">Contactez-moi</a>
+                class="bg-red-500 text-white px-3 py-2 text-sm rounded-md hover:bg-red-600 transition duration-300">Contact</a>
+
             <a href="{{ route('meeting') }}"
-                class="bg-red-500 text-white px-4 py-2 rounded-md hover:bg-red-600 transition duration-300">Prendre
-                rendez-vous</a>
+                class="bg-red-500 text-white px-3 py-2 text-sm rounded-md hover:bg-red-600 transition duration-300">Rendez-vous</a>
 
             @auth
-                {{-- Bouton mes commandes --}}
-
                 <a href="{{ route('order-history') }}"
-                    class="bg-red-500 text-white px-4 py-2 rounded-md hover:bg-red-600 transition duration-300">Mes
-                    commandes</a>
-
+                    class="bg-red-500 text-white px-3 py-2 text-sm rounded-md hover:bg-red-600 transition duration-300">Commandes</a>
             @endauth
         </div>
     </header>
