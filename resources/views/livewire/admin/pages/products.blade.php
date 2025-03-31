@@ -65,7 +65,7 @@
     <!-- Vue Mobile -->
     <div class="md:hidden space-y-4 max-w-screen">
         @foreach ($mobileProducts as $product)
-            <div class="bg-gray-800 rounded-lg overflow-hidden">
+            <div class="bg-gray-800 max-w-fit rounded-lg overflow-hidden">
                 <img src="{{ Storage::url($product->images[0] ?? '') }}" alt="{{ $product->name }}"
                     class="w-full h-48 object-cover">
                 <div class="p-4">
