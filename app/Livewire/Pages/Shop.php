@@ -12,7 +12,6 @@ class Shop extends Component
     {
         $this->products = Product::where('is_active', true)
         ->orderBy('created_at', 'desc')
-        ->take(4)
         ->get();
     }
     public function render()
