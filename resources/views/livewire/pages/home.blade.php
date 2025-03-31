@@ -15,6 +15,14 @@
                 guidance et bien-être à votre quotidien."
             </p>
         </div>
+
+        {{-- Quick access button to contact and meeting page on mobile --}}
+        <div class="flex justify-center gap-4 mb-8 md:hidden">
+            <a href="{{ route('contact') }}"
+                class="bg-red-500 text-white px-4 py-2 rounded-md hover:bg-red-600 transition duration-300">Contactez-moi</a>
+            <a href="{{ route('meeting') }}"
+                class="bg-red-500 text-white px-4 py-2 rounded-md hover:bg-red-600 transition duration-300">Prendre rendez-vous</a>
+        </div>
     </header>
 
     {{-- @dump(auth()->user()) --}}
