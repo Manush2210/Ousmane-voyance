@@ -5,6 +5,7 @@ namespace App\Livewire\Components\Product;
 use App\Models\Cart;
 use App\Models\Product;
 use Livewire\Component;
+use Illuminate\Support\Facades\Log;
 
 class ProductCard extends Component
 {
@@ -45,6 +46,9 @@ class ProductCard extends Component
                 'type' => 'success'
             ]);
         } catch (\Throwable $th) {
+            // Ajout d'un log pour diagnostiquer les erreurs
+            Log::error('Erreur lors de l\'ajout au panier : ' . $th->getMessage());
+
             $this->dispatch('showToast', [
                 'message' => 'Erreur: ' . $th->getMessage(),
                 'type' => 'error'

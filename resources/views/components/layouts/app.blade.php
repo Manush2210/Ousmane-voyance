@@ -16,6 +16,7 @@
 
         <title>{{ $title ?? 'Voyance et Bienveillance' }}</title>
         @vite(['resources/css/app.css', 'resources/js/app.js'])
+        @livewireScripts
     </head>
     <body>
         @livewire('layout.navbar')

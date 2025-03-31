@@ -381,6 +381,8 @@
         </div>
     </div>
 
+</div>
+
     <!-- Modal de recherche -->
 
 
