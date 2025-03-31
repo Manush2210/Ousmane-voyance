@@ -41,7 +41,7 @@
 
             <p>Méthode de paiement: Virement bancaire</p>
 
-            <p>Pour toute question: <a href="mailto:contact@voyance-seb.com">contact@voyance-seb.com</a></p>
+            <p>Pour toute question: <a href="mailto:support@voyanceetbienveillance.com">support@voyanceetbienveillance.com</a></p>
 
             <p>Merci de votre confiance!</p>
         </div>
