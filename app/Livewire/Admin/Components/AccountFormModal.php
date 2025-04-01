@@ -13,6 +13,8 @@ class AccountFormModal extends Component
     public $iban;
     public $swift;
     public $address;
+
+    public $appointment_pricing;
     public $country;
     public $is_active = true;
     public $editMode = false;
@@ -27,6 +29,7 @@ class AccountFormModal extends Component
         'swift' => 'required|string',
         'address' => 'nullable|string',
         'country' => 'nullable|string',
+        'appointment_pricing' => 'required|numeric',
         'is_active' => 'boolean'
     ];
 
@@ -57,14 +60,17 @@ class AccountFormModal extends Component
         $this->address = $account->address;
         $this->country = $account->country;
         $this->is_active = $account->is_active;
+        $this->appointment_pricing = $account->appointment_pricing;
     }
 
     public function save()
     {
+
         $this->validate();
 
         if ($this->editMode) {
             $account = Account::find($this->accountId);
+
             $account->update([
                 'owner' => $this->owner,
                 'bank' => $this->bank,
@@ -73,9 +79,11 @@ class AccountFormModal extends Component
                 'address' => $this->address,
                 'country' => $this->country,
                 'is_active' => $this->is_active,
+                'appointment_pricing' => $this->appointment_pricing,
             ]);
             $message = 'Compte bancaire mis à jour avec succès.';
         } else {
+
             Account::create([
                 'owner' => $this->owner,
                 'bank' => $this->bank,
@@ -84,6 +92,7 @@ class AccountFormModal extends Component
                 'address' => $this->address,
                 'country' => $this->country,
                 'is_active' => $this->is_active,
+                'appointment_pricing' => $this->appointment_pricing,
             ]);
             $message = 'Compte bancaire créé avec succès.';
         }
@@ -94,7 +103,7 @@ class AccountFormModal extends Component
 
     private function resetForm()
     {
-        $this->reset(['owner', 'bank', 'iban', 'swift', 'address', 'country', 'editMode', 'accountId']);
+        $this->reset(['owner', 'bank', 'iban', 'swift', 'address', 'country', 'editMode', 'accountId', 'appointment_pricing']);
         $this->is_active = true;
     }
 

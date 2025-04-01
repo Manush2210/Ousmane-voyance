@@ -14,6 +14,7 @@ class Account extends Model
         'address',
         'country',
         'is_active',
+        'appointment_pricing',
     ];
 
     protected $casts = [

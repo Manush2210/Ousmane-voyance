@@ -52,10 +52,18 @@
                         @error('country') <span class="text-red-500 text-sm">{{ $message }}</span> @enderror
                     </div>
 
+                    <div>
+                        <label class="block text-white/50 mb-2">Prix des rendez-vous</label>
+                        <input type="text" wire:model.live="appointment_pricing" class="w-full bg-gray-900 text-white rounded-md p-2">
+                        @error('country') <span class="text-red-500 text-sm">{{ $message }}</span> @enderror
+                    </div>
+
                     <div class="flex items-center">
                         <input type="checkbox" wire:model="is_active" class="bg-gray-900 rounded">
                         <label class="ml-2 text-white/50">Actif</label>
                     </div>
+
+
 
                     <div class="flex justify-end gap-4">
                         <button type="button" wire:click="closeModal" class="px-4 py-2 bg-gray-600 text-white rounded-md hover:bg-gray-700">

@@ -29,6 +29,7 @@ class Meeting extends Component
     public $clientPhone = '';
     public $notes = '';
     public $paymentProof; // Nouveau champ pour le fichier
+    public $contactMethod = ''; // Nouveau champ pour la méthode de contact
 
     public $calendarDays = [];
     public $bookedDates = [];
@@ -201,6 +202,7 @@ class Meeting extends Component
             'selectedDate' => 'required|date',
             'selectedTimeSlot' => 'required',
             'paymentProof' => 'required|file|max:10240', // 10MB max
+            'contactMethod' => 'required|in:email,whatsapp',
         ], [
             'clientName.required' => 'Veuillez saisir votre nom',
             'clientName.min' => 'Votre nom doit contenir au moins 3 caractères',
@@ -213,6 +215,8 @@ class Meeting extends Component
             'paymentProof.required' => 'Veuillez joindre une preuve de paiement',
             'paymentProof.file' => 'Le document doit être un fichier valide',
             'paymentProof.max' => 'La taille du fichier ne doit pas dépasser 10Mo',
+            'contactMethod.required' => 'Veuillez sélectionner une méthode de contact',
+            'contactMethod.in' => 'Méthode de contact invalide',
         ]);
 
         $slot = TimeSlot::find($this->selectedTimeSlot);
@@ -234,6 +238,7 @@ class Meeting extends Component
             'notes' => $this->notes,
             'payment_proof' => $paymentProofPath,
             'status' => 'booked',
+            'contact_method' => $this->contactMethod,
         ]);
 
         // Envoyer un email de confirmation au client

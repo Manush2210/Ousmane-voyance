@@ -19,7 +19,8 @@ class Appointment extends Model
         'payed_amount',
         'payment_proof',
         'status',
-        'notes'
+        'notes',
+        'contact_method'
     ];
 
     protected $casts = [

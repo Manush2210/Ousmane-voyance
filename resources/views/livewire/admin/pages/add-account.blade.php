@@ -54,6 +54,9 @@
                             <div class="text-sm text-white/60 mb-1">Pays</div>
                             <div>{{ $account->country }}</div>
                         </div>
+                        <div class="p-4 bg-gray-700/50 rounded-lg">
+                            <div class="text-sm text-white/60 mb-1">Prix de RDV</div>
+                            <div>{{ $account->appointment_pricing }}</div>
                     </div>
 
                     <!-- Action Button -->

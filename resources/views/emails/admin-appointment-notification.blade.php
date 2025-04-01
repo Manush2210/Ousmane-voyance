@@ -12,6 +12,9 @@ Une nouvelle réservation a été effectuée.
 - Date: {{ \Carbon\Carbon::parse($appointment->appointment_date)->locale('fr')->isoFormat('LL') }}
 - Heure: {{ \Carbon\Carbon::parse($appointment->start_time)->format('H:i') }}
 
+## Méthode de contact:
+- {{ $appointment->contact_method }}
+
 @if($appointment->notes)
 ## Notes du client:
 {{ $appointment->notes }}
