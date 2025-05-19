@@ -60,6 +60,15 @@
                                 @enderror
                             </div>
 
+                            <div>
+                                <label for="motifs" class="block text-sm font-medium text-gray-300">Motifs</label>
+                                <textarea id="motifs" wire:model="motifs" rows="3"
+                                    class="mt-1 block w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-md text-white focus:outline-none focus:ring-lime-500 focus:border-lime-500"></textarea>
+                                @error('motifs')
+                                    <span class="text-red-500 text-sm">{{ $message }}</span>
+                                @enderror
+                            </div>
+
                             <!-- Receiver Information Section -->
                             <div class="border-t border-gray-600 pt-4 mt-4">
                                 <h4 class="text-md font-medium text-gray-300 mb-3">Informations du destinataire</h4>
@@ -93,6 +102,16 @@
                                     <input type="text" id="receiver_country" wire:model="receiver_country"
                                         class="mt-1 block w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-md text-white focus:outline-none focus:ring-lime-500 focus:border-lime-500">
                                     @error('receiver_country')
+                                        <span class="text-red-500 text-sm">{{ $message }}</span>
+                                    @enderror
+                                </div>
+
+                                <div class="mt-4">
+                                    <label for="address"
+                                        class="block text-sm font-medium text-gray-300">Adresse</label>
+                                    <textarea id="address" wire:model="address" rows="3"
+                                        class="mt-1 block w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-md text-white focus:outline-none focus:ring-lime-500 focus:border-lime-500"></textarea>
+                                    @error('address')
                                         <span class="text-red-500 text-sm">{{ $message }}</span>
                                     @enderror
                                 </div>

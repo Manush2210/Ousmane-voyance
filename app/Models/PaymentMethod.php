@@ -11,11 +11,13 @@ class PaymentMethod extends Model
         'code',
         'description',
         'instructions',
+        'motifs',
         'is_active',
         'logo',
         'receiver_firstname',
         'receiver_lastname',
-        'receiver_country'
+        'receiver_country',
+        'address'
     ];
 
     protected $casts = [

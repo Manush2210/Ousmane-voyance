@@ -16,6 +16,7 @@ class PaymentMethodFormModal extends Component
     public $code;
     public $description;
     public $instructions;
+    public $motifs;
     public $logo;
     public $currentLogo;
     public $is_active = true;
@@ -24,6 +25,7 @@ class PaymentMethodFormModal extends Component
     public $receiver_firstname;
     public $receiver_lastname;
     public $receiver_country;
+    public $address;
 
     protected $listeners = ['openModal', 'closeModal'];
 
@@ -32,11 +34,13 @@ class PaymentMethodFormModal extends Component
         'code' => 'required|min:3',
         'description' => 'nullable',
         'instructions' => 'nullable',
+        'motifs' => 'nullable',
         'logo' => 'nullable|image|max:2048',
         'is_active' => 'boolean',
         'receiver_firstname' => 'nullable|string|max:255',
         'receiver_lastname' => 'nullable|string|max:255',
         'receiver_country' => 'nullable|string|max:255',
+        'address' => 'nullable|string|max:500',
     ];
 
     public function openModal($paymentMethodId = null)
@@ -64,11 +68,13 @@ class PaymentMethodFormModal extends Component
         $this->code = $paymentMethod->code;
         $this->description = $paymentMethod->description;
         $this->instructions = $paymentMethod->instructions;
+        $this->motifs = $paymentMethod->motifs;
         $this->is_active = $paymentMethod->is_active;
         $this->currentLogo = $paymentMethod->logo;
         $this->receiver_firstname = $paymentMethod->receiver_firstname;
         $this->receiver_lastname = $paymentMethod->receiver_lastname;
         $this->receiver_country = $paymentMethod->receiver_country;
+        $this->address = $paymentMethod->address;
     }
 
     public function updatedName()
@@ -101,11 +107,13 @@ class PaymentMethodFormModal extends Component
                 'code' => $this->code,
                 'description' => $this->description,
                 'instructions' => $this->instructions,
+                'motifs' => $this->motifs,
                 'is_active' => $this->is_active,
                 'logo' => $logoPath,
                 'receiver_firstname' => $this->receiver_firstname,
                 'receiver_lastname' => $this->receiver_lastname,
                 'receiver_country' => $this->receiver_country,
+                'address' => $this->address,
             ]);
             $message = 'Moyen de paiement mis à jour avec succès.';
         } else {
@@ -114,11 +122,13 @@ class PaymentMethodFormModal extends Component
                 'code' => $this->code,
                 'description' => $this->description,
                 'instructions' => $this->instructions,
+                'motifs' => $this->motifs,
                 'is_active' => $this->is_active,
                 'logo' => $logoPath,
                 'receiver_firstname' => $this->receiver_firstname,
                 'receiver_lastname' => $this->receiver_lastname,
                 'receiver_country' => $this->receiver_country,
+                'address' => $this->address,
             ]);
             $message = 'Moyen de paiement créé avec succès.';
         }
@@ -129,7 +139,7 @@ class PaymentMethodFormModal extends Component
 
     private function resetForm()
     {
-        $this->reset(['name', 'code', 'description', 'instructions', 'logo', 'currentLogo', 'editMode', 'paymentMethodId', 'receiver_firstname', 'receiver_lastname', 'receiver_country']);
+        $this->reset(['name', 'code', 'description', 'instructions', 'motifs', 'logo', 'currentLogo', 'editMode', 'paymentMethodId', 'receiver_firstname', 'receiver_lastname', 'receiver_country', 'address']);
         $this->is_active = true;
     }
 
