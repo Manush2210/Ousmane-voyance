@@ -9,7 +9,7 @@
                     <!-- Barre de recherche -->
                     <div class="relative flex-1 md:w-96">
                         <input type="text" wire:model.live="search" placeholder="Rechercher un produit..."
-                            class="w-full px-4 py-2 rounded-lg border border-gray-200 focus:border-lime-500 focus:ring-1 focus:ring-lime-500 outline-none transition">
+                            class="w-full px-4 py-2 rounded-lg border border-gray-200 focus:border-purple-500 focus:ring-1 focus:ring-purple-500 outline-none transition">
                         <div class="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
                                 stroke="currentColor">

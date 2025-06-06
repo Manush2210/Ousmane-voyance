@@ -5,7 +5,7 @@
     </div>
 
     @if (session()->has('message'))
-        <div class="bg-lime-300 text-white p-4 rounded-md mb-6">
+        <div class="bg-purple-300 text-white p-4 rounded-md mb-6">
             {{ session('message') }}
         </div>
     @endif
@@ -18,11 +18,11 @@
                     <div class="flex items-center justify-between">
                         <h4 class="text-lg font-medium text-white">Informations du compte</h4>
                         @if ($account->is_active)
-                            <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm font-medium">
+                            <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm font-medium">
                                 Actif
                             </span>
                         @else
-                            <span class="px-3 py-1 bg-lime-100 text-lime-800 rounded-full text-sm font-medium">
+                            <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm font-medium">
                                 Inactif
                             </span>
                         @endif

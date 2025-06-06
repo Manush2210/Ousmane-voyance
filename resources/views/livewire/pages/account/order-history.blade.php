@@ -3,11 +3,11 @@
         <!-- Navigation Tabs -->
         <div class="flex border-b mb-6">
             <a href="{{ route('profile') }}"
-                class="px-6 py-2 font-medium {{ request()->routeIs('profile') ? 'text-lime-600 border-b-2 border-lime-600' : 'text-gray-500 hover:text-lime-600' }}">
+                class="px-6 py-2 font-medium {{ request()->routeIs('profile') ? 'text-purple-600 border-b-2 border-purple-600' : 'text-gray-500 hover:text-purple-600' }}">
                 Mon Profil
             </a>
             <a href="{{ route('order-history') }}"
-                class="px-6 py-2 font-medium {{ request()->routeIs('order-history') ? 'text-lime-600 border-b-2 border-lime-600' : 'text-gray-500 hover:text-lime-600' }}">
+                class="px-6 py-2 font-medium {{ request()->routeIs('order-history') ? 'text-purple-600 border-b-2 border-purple-600' : 'text-gray-500 hover:text-purple-600' }}">
                 Historique des commandes
             </a>
         </div>
@@ -16,7 +16,7 @@
             <h2 class="text-2xl font-semibold mb-6">Mes commandes</h2>
             {{-- Sucess Message if session has new-order --}}
             @if (session('new-order'))
-                <div class="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative mb-4"
+                <div class="bg-purple-100 border border-purple-400 text-purple-700 px-4 py-3 rounded relative mb-4"
                     role="alert">
                     <strong class="font-bold">Commande passée avec succès !</strong>
                     <span class="block sm:inline">{{ session('new-order') }}</span>
@@ -26,7 +26,7 @@
             @if ($orders->isEmpty())
                 <div class="text-center py-8">
                     <div class="text-gray-500 mb-4">Vous n'avez pas encore passé de commande</div>
-                    <a href="{{ route('shop') }}" class="text-lime-600 hover:text-lime-700">
+                    <a href="{{ route('shop') }}" class="text-purple-600 hover:text-purple-700">
                         Découvrir nos produits
                     </a>
                 </div>
@@ -65,11 +65,11 @@
                                     <td class="px-6 py-4 whitespace-nowrap">
                                         <span
                                             class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full
-                                        @if ($order->status === 'completed') bg-green-100 text-green-800
+                                        @if ($order->status === 'completed') bg-purple-100 text-purple-800
                                         @elseif($order->status === 'pending')
                                             bg-yellow-100 text-yellow-800
                                         @elseif($order->status === 'cancelled')
-                                            bg-lime-100 text-lime-800
+                                            bg-purple-100 text-purple-800
                                         @else
                                             bg-gray-100 text-gray-800 @endif">
                                             @switch($order->status)

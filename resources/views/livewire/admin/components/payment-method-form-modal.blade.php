@@ -23,7 +23,7 @@
                                 <div>
                                     <label for="name" class="block text-sm font-medium text-gray-300">Nom</label>
                                     <input type="text" id="name" wire:model="name"
-                                        class="mt-1 block w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-md text-white focus:outline-none focus:ring-lime-500 focus:border-lime-500">
+                                        class="mt-1 block w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-md text-white focus:outline-none focus:ring-purple-500 focus:border-purple-500">
                                     @error('name')
                                         <span class="text-red-500 text-sm">{{ $message }}</span>
                                     @enderror
@@ -33,7 +33,7 @@
                                     <label for="code" class="block text-sm font-medium text-gray-300">Code</label>
                                     <input type="text" id="code" wire:model="code"
                                         {{ $editMode ? '' : 'readonly' }}
-                                        class="mt-1 block w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-md text-white focus:outline-none focus:ring-lime-500 focus:border-lime-500 {{ $editMode ? '' : 'opacity-70' }}">
+                                        class="mt-1 block w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-md text-white focus:outline-none focus:ring-purple-500 focus:border-purple-500 {{ $editMode ? '' : 'opacity-70' }}">
                                     @error('code')
                                         <span class="text-red-500 text-sm">{{ $message }}</span>
                                     @enderror
@@ -44,7 +44,7 @@
                                 <label for="description"
                                     class="block text-sm font-medium text-gray-300">Description</label>
                                 <textarea id="description" wire:model="description" rows="3"
-                                    class="mt-1 block w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-md text-white focus:outline-none focus:ring-lime-500 focus:border-lime-500"></textarea>
+                                    class="mt-1 block w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-md text-white focus:outline-none focus:ring-purple-500 focus:border-purple-500"></textarea>
                                 @error('description')
                                     <span class="text-red-500 text-sm">{{ $message }}</span>
                                 @enderror
@@ -54,7 +54,7 @@
                                 <label for="instructions"
                                     class="block text-sm font-medium text-gray-300">Instructions</label>
                                 <textarea id="instructions" wire:model="instructions" rows="3"
-                                    class="mt-1 block w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-md text-white focus:outline-none focus:ring-lime-500 focus:border-lime-500"></textarea>
+                                    class="mt-1 block w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-md text-white focus:outline-none focus:ring-purple-500 focus:border-purple-500"></textarea>
                                 @error('instructions')
                                     <span class="text-red-500 text-sm">{{ $message }}</span>
                                 @enderror
@@ -63,7 +63,7 @@
                             <div>
                                 <label for="motifs" class="block text-sm font-medium text-gray-300">Motifs</label>
                                 <textarea id="motifs" wire:model="motifs" rows="3"
-                                    class="mt-1 block w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-md text-white focus:outline-none focus:ring-lime-500 focus:border-lime-500"></textarea>
+                                    class="mt-1 block w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-md text-white focus:outline-none focus:ring-purple-500 focus:border-purple-500"></textarea>
                                 @error('motifs')
                                     <span class="text-red-500 text-sm">{{ $message }}</span>
                                 @enderror
@@ -79,7 +79,7 @@
                                             class="block text-sm font-medium text-gray-300">Prénom du
                                             destinataire</label>
                                         <input type="text" id="receiver_firstname" wire:model="receiver_firstname"
-                                            class="mt-1 block w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-md text-white focus:outline-none focus:ring-lime-500 focus:border-lime-500">
+                                            class="mt-1 block w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-md text-white focus:outline-none focus:ring-purple-500 focus:border-purple-500">
                                         @error('receiver_firstname')
                                             <span class="text-red-500 text-sm">{{ $message }}</span>
                                         @enderror
@@ -89,7 +89,7 @@
                                         <label for="receiver_lastname"
                                             class="block text-sm font-medium text-gray-300">Nom du destinataire</label>
                                         <input type="text" id="receiver_lastname" wire:model="receiver_lastname"
-                                            class="mt-1 block w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-md text-white focus:outline-none focus:ring-lime-500 focus:border-lime-500">
+                                            class="mt-1 block w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-md text-white focus:outline-none focus:ring-purple-500 focus:border-purple-500">
                                         @error('receiver_lastname')
                                             <span class="text-red-500 text-sm">{{ $message }}</span>
                                         @enderror
@@ -100,7 +100,7 @@
                                     <label for="receiver_country" class="block text-sm font-medium text-gray-300">Pays
                                         du destinataire</label>
                                     <input type="text" id="receiver_country" wire:model="receiver_country"
-                                        class="mt-1 block w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-md text-white focus:outline-none focus:ring-lime-500 focus:border-lime-500">
+                                        class="mt-1 block w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-md text-white focus:outline-none focus:ring-purple-500 focus:border-purple-500">
                                     @error('receiver_country')
                                         <span class="text-red-500 text-sm">{{ $message }}</span>
                                     @enderror
@@ -110,7 +110,7 @@
                                     <label for="address"
                                         class="block text-sm font-medium text-gray-300">Adresse</label>
                                     <textarea id="address" wire:model="address" rows="3"
-                                        class="mt-1 block w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-md text-white focus:outline-none focus:ring-lime-500 focus:border-lime-500"></textarea>
+                                        class="mt-1 block w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-md text-white focus:outline-none focus:ring-purple-500 focus:border-purple-500"></textarea>
                                     @error('address')
                                         <span class="text-red-500 text-sm">{{ $message }}</span>
                                     @enderror
@@ -150,7 +150,7 @@
 
                             <div class="flex items-center">
                                 <input id="is_active" type="checkbox" wire:model="is_active"
-                                    class="h-4 w-4 text-lime-500 focus:ring-lime-500 border-gray-600 rounded bg-gray-700">
+                                    class="h-4 w-4 text-purple-500 focus:ring-purple-500 border-gray-600 rounded bg-gray-700">
                                 <label for="is_active" class="ml-2 block text-sm text-gray-300">
                                     Actif
                                 </label>
@@ -159,7 +159,7 @@
                     </div>
                     <div class="bg-gray-700 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
                         <button wire:click="save" type="button"
-                            class="w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-lime-500 text-base font-medium text-white hover:bg-lime-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-lime-500 sm:ml-3 sm:w-auto sm:text-sm">
+                            class="w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-purple-500 text-base font-medium text-white hover:bg-purple-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500 sm:ml-3 sm:w-auto sm:text-sm">
                             {{ $editMode ? 'Mettre à jour' : 'Ajouter' }}
                         </button>
                         <button wire:click="closeModal" type="button"

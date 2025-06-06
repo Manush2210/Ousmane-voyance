@@ -102,7 +102,7 @@
             @endif
 
             <p>Pour toute question: <a
-                    href="mailto:contact@guidance-spirituelle.com">contact@guidance-spirituelle.com</a></p>
+                    href="mailto:contact@voyance-spirituelle-expert.com">contact@voyance-spirituelle-expert.com</a></p>
 
             <p>Merci de votre confiance!</p>
         </div>

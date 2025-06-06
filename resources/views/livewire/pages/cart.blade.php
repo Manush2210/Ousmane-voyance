@@ -5,7 +5,7 @@
         @if (empty($cartItems))
             <div class="text-center py-8">
                 <p class="text-gray-500 mb-4">Votre panier est vide</p>
-                <a href="{{ route('shop') }}" class="text-lime-600 hover:underline">Poursuivre les achats</a>
+                <a href="{{ route('shop') }}" class="text-purple-600 hover:underline">Poursuivre les achats</a>
             </div>
         @else
             <div class="overflow-x-auto">
@@ -28,7 +28,7 @@
                                             alt="{{ $item['product']['name'] }}"
                                             class="w-16 h-16 rounded-lg object-cover">
                                         <a href="{{ route('single-product', ['slug' => $item['product']['slug'] ?? $productId]) }}"
-                                            class="text-lime-600 font-semibold hover:underline">
+                                            class="text-purple-600 font-semibold hover:underline">
                                             {{ $item['product']['name'] }}
                                         </a>
                                     </div>
@@ -50,7 +50,7 @@
                                 </td>
                                 <td class="py-4 text-right">
                                     <button wire:click="removeItem({{ $productId }})"
-                                        class="text-gray-500 hover:text-lime-500 p-1">
+                                        class="text-gray-500 hover:text-purple-500 p-1">
                                         <i class="fas fa-trash"></i>
                                     </button>
                                 </td>
@@ -64,7 +64,7 @@
             <div class="mt-6 text-right text-gray-700 space-y-2">
                 <p>Sous-total : <span class="font-semibold">{{ number_format($subtotal, 2, ',', ' ') }} €</span></p>
                 <p>Frais de port : <span class="font-semibold">{{ number_format($shipping, 2, ',', ' ') }} €</span></p>
-                <p class="text-lime-500 font-semibold">Livraison gratuite à partir de
+                <p class="text-purple-500 font-semibold">Livraison gratuite à partir de
                     {{ number_format($free_shipping_threshold, 2, ',', ' ') }} €</p>
 
                 <p class="text-xl font-bold mt-4">Montant total :
@@ -75,15 +75,15 @@
             <!-- Boutons -->
             <div class="mt-6 flex flex-wrap justify-between items-center gap-4">
                 <div class="flex space-x-4">
-                    <a href="{{ route('shop') }}" class="text-lime-600 hover:underline">
+                    <a href="{{ route('shop') }}" class="text-purple-600 hover:underline">
                         « Poursuivre les achats
                     </a>
-                    <button wire:click="clearCart" class="text-gray-500 hover:text-lime-500">
+                    <button wire:click="clearCart" class="text-gray-500 hover:text-purple-500">
                         Vider le panier
                     </button>
                 </div>
                 <a href="{{ route('order') }}"
-                    class="bg-lime-600 text-white px-6 py-2 rounded-lg text-lg hover:bg-lime-300">
+                    class="bg-purple-600 text-white px-6 py-2 rounded-lg text-lg hover:bg-purple-300">
                     Commander
                 </a>
             </div>

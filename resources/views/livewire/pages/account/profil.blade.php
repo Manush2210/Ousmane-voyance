@@ -3,11 +3,11 @@
         <!-- Navigation Tabs -->
         <div class="flex border-b mb-6">
             <a href="{{ route('profile') }}"
-                class="px-6 py-2 font-medium {{ request()->routeIs('profile') ? 'text-lime-600 border-b-2 border-lime-600' : 'text-gray-500 hover:text-lime-600' }}">
+                class="px-6 py-2 font-medium {{ request()->routeIs('profile') ? 'text-purple-600 border-b-2 border-purple-600' : 'text-gray-500 hover:text-purple-600' }}">
                 Mon Profil
             </a>
             <a href="{{ route('order-history') }}"
-                class="px-6 py-2 font-medium {{ request()->routeIs('order-history') ? 'text-lime-600 border-b-2 border-lime-600' : 'text-gray-500 hover:text-lime-600' }}">
+                class="px-6 py-2 font-medium {{ request()->routeIs('order-history') ? 'text-purple-600 border-b-2 border-purple-600' : 'text-gray-500 hover:text-purple-600' }}">
                 Historique des commandes
             </a>
         </div>
@@ -23,7 +23,7 @@
                         <input type="text" wire:model="name"
                             class="mt-1 block w-full rounded-md border-gray-300 shadow-sm">
                         @error('name')
-                            <span class="text-lime-500 text-sm">{{ $message }}</span>
+                            <span class="text-purple-500 text-sm">{{ $message }}</span>
                         @enderror
                     </div>
 
@@ -32,7 +32,7 @@
                         <input type="email" wire:model="email"
                             class="mt-1 block w-full rounded-md border-gray-300 shadow-sm">
                         @error('email')
-                            <span class="text-lime-500 text-sm">{{ $message }}</span>
+                            <span class="text-purple-500 text-sm">{{ $message }}</span>
                         @enderror
                     </div>
 
@@ -41,7 +41,7 @@
                         <input type="text" wire:model="first_name"
                             class="mt-1 block w-full rounded-md border-gray-300 shadow-sm">
                         @error('first_name')
-                            <span class="text-lime-500 text-sm">{{ $message }}</span>
+                            <span class="text-purple-500 text-sm">{{ $message }}</span>
                         @enderror
                     </div>
 
@@ -50,7 +50,7 @@
                         <input type="text" wire:model="last_name"
                             class="mt-1 block w-full rounded-md border-gray-300 shadow-sm">
                         @error('last_name')
-                            <span class="text-lime-500 text-sm">{{ $message }}</span>
+                            <span class="text-purple-500 text-sm">{{ $message }}</span>
                         @enderror
                     </div>
 
@@ -59,7 +59,7 @@
                         <input type="text" wire:model="phone"
                             class="mt-1 block w-full rounded-md border-gray-300 shadow-sm">
                         @error('phone')
-                            <span class="text-lime-500 text-sm">{{ $message }}</span>
+                            <span class="text-purple-500 text-sm">{{ $message }}</span>
                         @enderror
                     </div>
 
@@ -68,7 +68,7 @@
                         <input type="text" wire:model="address"
                             class="mt-1 block w-full rounded-md border-gray-300 shadow-sm">
                         @error('address')
-                            <span class="text-lime-500 text-sm">{{ $message }}</span>
+                            <span class="text-purple-500 text-sm">{{ $message }}</span>
                         @enderror
                     </div>
 
@@ -77,7 +77,7 @@
                         <input type="text" wire:model="postal_code"
                             class="mt-1 block w-full rounded-md border-gray-300 shadow-sm">
                         @error('postal_code')
-                            <span class="text-lime-500 text-sm">{{ $message }}</span>
+                            <span class="text-purple-500 text-sm">{{ $message }}</span>
                         @enderror
                     </div>
 
@@ -86,7 +86,7 @@
                         <input type="text" wire:model="city"
                             class="mt-1 block w-full rounded-md border-gray-300 shadow-sm">
                         @error('city')
-                            <span class="text-lime-500 text-sm">{{ $message }}</span>
+                            <span class="text-purple-500 text-sm">{{ $message }}</span>
                         @enderror
                     </div>
 
@@ -99,13 +99,13 @@
                             <option value="Canada">Canada</option>
                         </select>
                         @error('country')
-                            <span class="text-lime-500 text-sm">{{ $message }}</span>
+                            <span class="text-purple-500 text-sm">{{ $message }}</span>
                         @enderror
                     </div>
                 </div>
 
                 <div class="flex justify-end">
-                    <button type="submit" class="bg-lime-600 text-white px-4 py-2 rounded-md hover:bg-lime-300">
+                    <button type="submit" class="bg-purple-600 text-white px-4 py-2 rounded-md hover:bg-purple-300">
                         Mettre à jour le profil
                     </button>
                 </div>
@@ -120,7 +120,7 @@
                         <input type="password" wire:model="current_password"
                             class="mt-1 block w-full rounded-md border-gray-300 shadow-sm">
                         @error('current_password')
-                            <span class="text-lime-500 text-sm">{{ $message }}</span>
+                            <span class="text-purple-500 text-sm">{{ $message }}</span>
                         @enderror
                     </div>
 
@@ -129,7 +129,7 @@
                         <input type="password" wire:model="new_password"
                             class="mt-1 block w-full rounded-md border-gray-300 shadow-sm">
                         @error('new_password')
-                            <span class="text-lime-500 text-sm">{{ $message }}</span>
+                            <span class="text-purple-500 text-sm">{{ $message }}</span>
                         @enderror
                     </div>
 
@@ -140,7 +140,8 @@
                     </div>
 
                     <div class="flex justify-end">
-                        <button type="submit" class="bg-lime-600 text-white px-4 py-2 rounded-md hover:bg-lime-300">
+                        <button type="submit"
+                            class="bg-purple-600 text-white px-4 py-2 rounded-md hover:bg-purple-300">
                             Changer le mot de passe
                         </button>
                     </div>

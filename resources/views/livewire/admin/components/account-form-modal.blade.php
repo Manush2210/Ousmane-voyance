@@ -20,7 +20,7 @@
                         <label class="block text-white/50 mb-2">Propriétaire</label>
                         <input type="text" wire:model="owner" class="w-full bg-gray-900 text-white rounded-md p-2">
                         @error('owner')
-                            <span class="text-lime-500 text-sm">{{ $message }}</span>
+                            <span class="text-purple-500 text-sm">{{ $message }}</span>
                         @enderror
                     </div>
 
@@ -28,7 +28,7 @@
                         <label class="block text-white/50 mb-2">Banque</label>
                         <input type="text" wire:model="bank" class="w-full bg-gray-900 text-white rounded-md p-2">
                         @error('bank')
-                            <span class="text-lime-500 text-sm">{{ $message }}</span>
+                            <span class="text-purple-500 text-sm">{{ $message }}</span>
                         @enderror
                     </div>
 
@@ -38,7 +38,7 @@
                             <input type="text" wire:model="iban"
                                 class="w-full bg-gray-900 text-white rounded-md p-2">
                             @error('iban')
-                                <span class="text-lime-500 text-sm">{{ $message }}</span>
+                                <span class="text-purple-500 text-sm">{{ $message }}</span>
                             @enderror
                         </div>
 
@@ -47,7 +47,7 @@
                             <input type="text" wire:model="swift"
                                 class="w-full bg-gray-900 text-white rounded-md p-2">
                             @error('swift')
-                                <span class="text-lime-500 text-sm">{{ $message }}</span>
+                                <span class="text-purple-500 text-sm">{{ $message }}</span>
                             @enderror
                         </div>
                     </div>
@@ -56,7 +56,7 @@
                         <label class="block text-white/50 mb-2">Adresse</label>
                         <textarea wire:model="address" class="w-full bg-gray-900 text-white rounded-md p-2" rows="3"></textarea>
                         @error('address')
-                            <span class="text-lime-500 text-sm">{{ $message }}</span>
+                            <span class="text-purple-500 text-sm">{{ $message }}</span>
                         @enderror
                     </div>
 
@@ -64,7 +64,7 @@
                         <label class="block text-white/50 mb-2">Pays</label>
                         <input type="text" wire:model="country" class="w-full bg-gray-900 text-white rounded-md p-2">
                         @error('country')
-                            <span class="text-lime-500 text-sm">{{ $message }}</span>
+                            <span class="text-purple-500 text-sm">{{ $message }}</span>
                         @enderror
                     </div>
 
@@ -73,7 +73,7 @@
                         <input type="text" wire:model.live="appointment_pricing"
                             class="w-full bg-gray-900 text-white rounded-md p-2">
                         @error('country')
-                            <span class="text-lime-500 text-sm">{{ $message }}</span>
+                            <span class="text-purple-500 text-sm">{{ $message }}</span>
                         @enderror
                     </div>
 

@@ -29,17 +29,17 @@
                 </div>
 
                 @if (session()->has('success'))
-                    <div class="rounded-md bg-green-50 p-4 mb-6">
+                    <div class="rounded-md bg-purple-50 p-4 mb-6">
                         <div class="flex">
                             <div class="flex-shrink-0">
-                                <svg class="h-5 w-5 text-green-400" viewBox="0 0 20 20" fill="currentColor">
+                                <svg class="h-5 w-5 text-purple-400" viewBox="0 0 20 20" fill="currentColor">
                                     <path fill-rule="evenodd"
                                         d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
                                         clip-rule="evenodd" />
                                 </svg>
                             </div>
                             <div class="ml-3">
-                                <p class="text-sm font-medium text-green-800">{{ session('success') }}</p>
+                                <p class="text-sm font-medium text-purple-800">{{ session('success') }}</p>
                             </div>
                         </div>
                     </div>
@@ -68,7 +68,7 @@
                         <label for="name" class="block text-sm font-medium text-gray-700">Nom*</label>
                         <div class="mt-1">
                             <input type="text" id="name" wire:model="name" required
-                                class="shadow-sm focus:ring-lime-500 focus:border-lime-500 block w-full sm:text-sm border-gray-300 rounded-md">
+                                class="shadow-sm focus:ring-purple-500 focus:border-purple-500 block w-full sm:text-sm border-gray-300 rounded-md">
                         </div>
                         @error('name')
                             <p class="mt-2 text-sm text-red-600">{{ $message }}</p>
@@ -79,7 +79,7 @@
                         <label for="email" class="block text-sm font-medium text-gray-700">Adresse e-mail*</label>
                         <div class="mt-1">
                             <input type="email" id="email" wire:model="email" required
-                                class="shadow-sm focus:ring-lime-500 focus:border-lime-500 block w-full sm:text-sm border-gray-300 rounded-md">
+                                class="shadow-sm focus:ring-purple-500 focus:border-purple-500 block w-full sm:text-sm border-gray-300 rounded-md">
                         </div>
                         @error('email')
                             <p class="mt-2 text-sm text-red-600">{{ $message }}</p>
@@ -98,7 +98,7 @@
                         <label for="message" class="block text-sm font-medium text-gray-700">Message*</label>
                         <div class="mt-1">
                             <textarea id="message" wire:model="message" rows="4" required
-                                class="shadow-sm focus:ring-lime-500 focus:border-lime-500 block w-full sm:text-sm border-gray-300 rounded-md"></textarea>
+                                class="shadow-sm focus:ring-purple-500 focus:border-purple-500 block w-full sm:text-sm border-gray-300 rounded-md"></textarea>
                         </div>
                         @error('message')
                             <p class="mt-2 text-sm text-red-600">{{ $message }}</p>
@@ -107,7 +107,7 @@
 
                     <div class="flex justify-end">
                         <button type="submit"
-                            class="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-lime-600 hover:bg-lime-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-lime-500">
+                            class="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-purple-600 hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500">
                             <span wire:loading.remove wire:target="submit">Envoyer</span>
                             <span wire:loading wire:target="submit" class="flex items-center">
                                 <svg class="animate-spin -ml-1 mr-2 h-4 w-4 text-white"

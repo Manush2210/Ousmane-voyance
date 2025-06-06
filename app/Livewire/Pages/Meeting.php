@@ -290,7 +290,7 @@ class Meeting extends Component
             ->send(new AppointmentConfirmation($appointment, $slot));
 
         // Envoyer un email de notification à l'admin
-        Mail::to('contact@guidance-spirituelle.com')
+        Mail::to('contact@voyance-spirituelle-expert.com')
             ->send(new AdminAppointmentNotification($appointment, $slot));
         $this->dispatch('showToast', [
             'message' => 'Rendez-vous réservé avec succès! Un email de confirmation vous a été envoyé.',

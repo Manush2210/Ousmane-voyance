@@ -7,7 +7,7 @@
         </div>
 
         @if (session()->has('error'))
-            <div class="bg-lime-500 text-white p-3 rounded mb-4">
+            <div class="bg-purple-500 text-white p-3 rounded mb-4">
                 {{ session('error') }}
             </div>
         @endif
@@ -16,32 +16,32 @@
             <div>
                 <label for="email" class="block text-sm font-medium text-gray-300">Email</label>
                 <input wire:model="email" type="email" id="email"
-                    class="mt-1 block w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-md text-white focus:outline-none focus:ring-lime-500 focus:border-lime-500">
+                    class="mt-1 block w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-md text-white focus:outline-none focus:ring-purple-500 focus:border-purple-500">
                 @error('email')
-                    <span class="text-lime-500 text-sm">{{ $message }}</span>
+                    <span class="text-purple-500 text-sm">{{ $message }}</span>
                 @enderror
             </div>
 
             <div>
                 <label for="password" class="block text-sm font-medium text-gray-300">Mot de passe</label>
                 <input wire:model="password" type="password" id="password"
-                    class="mt-1 block w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-md text-white focus:outline-none focus:ring-lime-500 focus:border-lime-500">
+                    class="mt-1 block w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-md text-white focus:outline-none focus:ring-purple-500 focus:border-purple-500">
                 @error('password')
-                    <span class="text-lime-500 text-sm">{{ $message }}</span>
+                    <span class="text-purple-500 text-sm">{{ $message }}</span>
                 @enderror
             </div>
 
             <div class="flex items-center justify-between">
                 <div class="flex items-center">
                     <input wire:model="remember" id="remember" type="checkbox"
-                        class="h-4 w-4 text-lime-600 focus:ring-lime-500 border-gray-600 rounded bg-gray-700">
+                        class="h-4 w-4 text-purple-600 focus:ring-purple-500 border-gray-600 rounded bg-gray-700">
                     <label for="remember" class="ml-2 block text-sm text-gray-300">Se souvenir de moi</label>
                 </div>
             </div>
 
             <div>
                 <button type="submit"
-                    class="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-lime-600 hover:bg-lime-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-lime-500">
+                    class="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-purple-600 hover:bg-purple-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500">
                     <span wire:loading.remove>Connexion</span>
                     <span wire:loading>Connexion en cours...</span>
                 </button>

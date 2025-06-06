@@ -8,8 +8,8 @@
             <div class="mb-8 max-w-xl">
                 <div class="relative">
                     <input type="text" wire:model.live.debounce.300ms="search" placeholder="Affiner votre recherche..."
-                        class="w-full py-3 px-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-lime-600">
-                    <button wire:click="$refresh" class="absolute right-3 top-3 text-gray-500 hover:text-lime-600">
+                        class="w-full py-3 px-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600">
+                    <button wire:click="$refresh" class="absolute right-3 top-3 text-gray-500 hover:text-purple-600">
                         <x-heroicon-s-magnifying-glass class="h-5 w-5" />
                     </button>
                 </div>
@@ -50,7 +50,7 @@
                                 Essayez d'autres mots-clés ou consultez nos catégories populaires.
                             </p>
                             <a href="{{ route('shop') }}"
-                                class="inline-block bg-lime-600 hover:bg-lime-300 text-white font-medium py-2 px-6 rounded-md transition">
+                                class="inline-block bg-purple-600 hover:bg-purple-300 text-white font-medium py-2 px-6 rounded-md transition">
                                 Parcourir tous les produits
                             </a>
                         </div>
@@ -61,7 +61,7 @@
                 <div class="text-center py-8">
                     <h3 class="text-2xl text-gray-600 mb-4">Découvrez nos produits populaires</h3>
                     <a href="{{ route('shop') }}"
-                        class="inline-block bg-lime-600 hover:bg-lime-300 text-white font-medium py-2 px-6 rounded-md transition">
+                        class="inline-block bg-purple-600 hover:bg-purple-300 text-white font-medium py-2 px-6 rounded-md transition">
                         Parcourir la boutique
                     </a>
                 </div>

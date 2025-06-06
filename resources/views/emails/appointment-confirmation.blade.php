@@ -34,5 +34,5 @@
 
     Merci pour votre confiance,
 
-    L'équipe de Guidance Spirituelle
+    L'équipe de Voyance Spirituelle Expert
 @endcomponent

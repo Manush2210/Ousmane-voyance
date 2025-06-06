@@ -5,19 +5,19 @@
     <div class="flex items-center mb-6">
         <div class="w-1/3 text-center">
             <div
-                class="font-semibold p-2 border-b-4 {{ $step === 1 ? 'border-lime-600 text-lime-600' : 'border-gray-200 text-gray-500' }}">
+                class="font-semibold p-2 border-b-4 {{ $step === 1 ? 'border-purple-600 text-purple-600' : 'border-gray-200 text-gray-500' }}">
                 <i class="fas fa-id-card mr-1"></i>Détails
             </div>
         </div>
         <div class="w-1/3 text-center">
             <div
-                class="font-semibold p-2 border-b-4 {{ $step === 2 ? 'border-lime-600 text-lime-600' : 'border-gray-200 text-gray-500' }}">
+                class="font-semibold p-2 border-b-4 {{ $step === 2 ? 'border-purple-600 text-purple-600' : 'border-gray-200 text-gray-500' }}">
                 <i class="fas fa-credit-card mr-1"></i>Mode de paiement
             </div>
         </div>
         <div class="w-1/3 text-center">
             <div
-                class="font-semibold p-2 border-b-4 {{ $step === 3 ? 'border-lime-600 text-lime-600' : 'border-gray-200 text-gray-500' }}">
+                class="font-semibold p-2 border-b-4 {{ $step === 3 ? 'border-purple-600 text-purple-600' : 'border-gray-200 text-gray-500' }}">
                 <i class="fas fa-check mr-1"></i>Confirmation
             </div>
         </div>
@@ -29,13 +29,13 @@
             <!-- Choix connexion ou création compte -->
             <div class="mb-6 space-y-4">
                 <label
-                    class="flex items-center space-x-2 border p-4 rounded-md {{ $accountOption === 'register' ? 'border-lime-500' : 'border-gray-200' }}">
+                    class="flex items-center space-x-2 border p-4 rounded-md {{ $accountOption === 'register' ? 'border-purple-500' : 'border-gray-200' }}">
                     <input type="radio" wire:model.live="accountOption" value="register" />
                     <span>Créer un compte</span>
                 </label>
 
                 <label
-                    class="flex items-center space-x-2 border p-4 rounded-md {{ $accountOption === 'login' ? 'border-lime-500' : 'border-gray-200' }}">
+                    class="flex items-center space-x-2 border p-4 rounded-md {{ $accountOption === 'login' ? 'border-purple-500' : 'border-gray-200' }}">
                     <input type="radio" wire:model.live="accountOption" value="login" />
                     <span>Connexion</span>
                 </label>
@@ -48,7 +48,7 @@
                         <label class="block text-gray-700">Adresse e-mail</label>
                         <input type="email" wire:model="email" class="w-full border rounded px-3 py-2 bg-gray-100">
                         @error('email')
-                            <span class="text-lime-500 text-sm">{{ $message }}</span>
+                            <span class="text-purple-500 text-sm">{{ $message }}</span>
                         @enderror
                     </div>
                     <div>
@@ -56,11 +56,11 @@
                         <input type="password" wire:model="password"
                             class="w-full border rounded px-3 py-2 bg-gray-100">
                         @error('password')
-                            <span class="text-lime-500 text-sm">{{ $message }}</span>
+                            <span class="text-purple-500 text-sm">{{ $message }}</span>
                         @enderror
-                        {{-- <a href="{{ route('password.request') }}" class="text-sm text-lime-600 hover:underline mt-1 inline-block">Mot de passe oublié ?</a> --}}
+                        {{-- <a href="{{ route('password.request') }}" class="text-sm text-purple-600 hover:underline mt-1 inline-block">Mot de passe oublié ?</a> --}}
                     </div>
-                    <button type="submit" class="bg-lime-600 text-white px-6 py-2 rounded hover:bg-lime-300">Se
+                    <button type="submit" class="bg-purple-600 text-white px-6 py-2 rounded hover:bg-purple-300">Se
                         connecter</button>
                 </form>
             @else
@@ -81,7 +81,7 @@
                         <label class="block text-gray-700">Nom d'utilisateur</label>
                         <input type="text" wire:model="name" class="w-full border px-3 py-2 bg-gray-100 rounded">
                         @error('name')
-                            <span class="text-lime-500 text-sm">{{ $message }}</span>
+                            <span class="text-purple-500 text-sm">{{ $message }}</span>
                         @enderror
                     </div>
 
@@ -91,7 +91,7 @@
                             <input type="text" wire:model="first_name"
                                 class="border w-full px-3 py-2 bg-gray-100 rounded">
                             @error('first_name')
-                                <span class="text-lime-500 text-sm">{{ $message }}</span>
+                                <span class="text-purple-500 text-sm">{{ $message }}</span>
                             @enderror
                         </div>
                         <div>
@@ -99,7 +99,7 @@
                             <input type="text" wire:model="last_name"
                                 class="border w-full px-3 py-2 bg-gray-100 rounded">
                             @error('last_name')
-                                <span class="text-lime-500 text-sm">{{ $message }}</span>
+                                <span class="text-purple-500 text-sm">{{ $message }}</span>
                             @enderror
                         </div>
                     </div>
@@ -108,7 +108,7 @@
                         <label class="block text-gray-700">Téléphone</label>
                         <input type="text" wire:model="phone" class="w-full border px-3 py-2 bg-gray-100 rounded">
                         @error('phone')
-                            <span class="text-lime-500 text-sm">{{ $message }}</span>
+                            <span class="text-purple-500 text-sm">{{ $message }}</span>
                         @enderror
                     </div>
 
@@ -116,7 +116,7 @@
                         <label class="block text-gray-700">Adresse</label>
                         <input type="text" wire:model="address" class="w-full border px-3 py-2 bg-gray-100 rounded">
                         @error('address')
-                            <span class="text-lime-500 text-sm">{{ $message }}</span>
+                            <span class="text-purple-500 text-sm">{{ $message }}</span>
                         @enderror
                     </div>
 
@@ -125,14 +125,14 @@
                             <label class="block text-gray-700">Code postal</label>
                             <input type="text" wire:model="postal_code" class="border px-3 py-2 bg-gray-100 rounded">
                             @error('postal_code')
-                                <span class="text-lime-500 text-sm">{{ $message }}</span>
+                                <span class="text-purple-500 text-sm">{{ $message }}</span>
                             @enderror
                         </div>
                         <div>
                             <label class="block text-gray-700">Ville</label>
                             <input type="text" wire:model="city" class="border px-3 py-2 bg-gray-100 rounded">
                             @error('city')
-                                <span class="text-lime-500 text-sm">{{ $message }}</span>
+                                <span class="text-purple-500 text-sm">{{ $message }}</span>
                             @enderror
                         </div>
                     </div>
@@ -151,7 +151,7 @@
                         <label class="block text-gray-700">Adresse e-mail</label>
                         <input type="email" wire:model="email" class="w-full border px-3 py-2 bg-gray-100 rounded">
                         @error('email')
-                            <span class="text-lime-500 text-sm">{{ $message }}</span>
+                            <span class="text-purple-500 text-sm">{{ $message }}</span>
                         @enderror
                     </div>
 
@@ -160,7 +160,7 @@
                         <input type="password" wire:model="password"
                             class="w-full border px-3 py-2 bg-gray-100 rounded">
                         @error('password')
-                            <span class="text-lime-500 text-sm">{{ $message }}</span>
+                            <span class="text-purple-500 text-sm">{{ $message }}</span>
                         @enderror
                     </div>
 
@@ -181,7 +181,7 @@
                         <input type="text" wire:model="first_name"
                             class="border w-full px-3 py-2 bg-gray-100 rounded">
                         @error('first_name')
-                            <span class="text-lime-500 text-sm">{{ $message }}</span>
+                            <span class="text-purple-500 text-sm">{{ $message }}</span>
                         @enderror
                     </div>
                     <div>
@@ -189,7 +189,7 @@
                         <input type="text" wire:model="last_name"
                             class="border w-full px-3 py-2 bg-gray-100 rounded">
                         @error('last_name')
-                            <span class="text-lime-500 text-sm">{{ $message }}</span>
+                            <span class="text-purple-500 text-sm">{{ $message }}</span>
                         @enderror
                     </div>
                 </div>
@@ -198,7 +198,7 @@
                     <label class="block text-gray-700">Téléphone</label>
                     <input type="text" wire:model="phone" class="w-full border px-3 py-2 bg-gray-100 rounded">
                     @error('phone')
-                        <span class="text-lime-500 text-sm">{{ $message }}</span>
+                        <span class="text-purple-500 text-sm">{{ $message }}</span>
                     @enderror
                 </div>
 
@@ -206,7 +206,7 @@
                     <label class="block text-gray-700">Adresse</label>
                     <input type="text" wire:model="address" class="w-full border px-3 py-2 bg-gray-100 rounded">
                     @error('address')
-                        <span class="text-lime-500 text-sm">{{ $message }}</span>
+                        <span class="text-purple-500 text-sm">{{ $message }}</span>
                     @enderror
                 </div>
 
@@ -215,14 +215,14 @@
                         <label class="block text-gray-700">Code postal</label>
                         <input type="text" wire:model="postal_code" class="border px-3 py-2 bg-gray-100 rounded">
                         @error('postal_code')
-                            <span class="text-lime-500 text-sm">{{ $message }}</span>
+                            <span class="text-purple-500 text-sm">{{ $message }}</span>
                         @enderror
                     </div>
                     <div>
                         <label class="block text-gray-700">Ville</label>
                         <input type="text" wire:model="city" class="border px-3 py-2 bg-gray-100 rounded">
                         @error('city')
-                            <span class="text-lime-500 text-sm">{{ $message }}</span>
+                            <span class="text-purple-500 text-sm">{{ $message }}</span>
                         @enderror
                     </div>
                 </div>
@@ -245,7 +245,7 @@
                             <input type="text" wire:model="shipping_first_name"
                                 class="border w-full px-3 py-2 bg-gray-100 rounded">
                             @error('shipping_first_name')
-                                <span class="text-lime-500 text-sm">{{ $message }}</span>
+                                <span class="text-purple-500 text-sm">{{ $message }}</span>
                             @enderror
                         </div>
                         <div>
@@ -253,7 +253,7 @@
                             <input type="text" wire:model="shipping_last_name"
                                 class="border w-full px-3 py-2 bg-gray-100 rounded">
                             @error('shipping_last_name')
-                                <span class="text-lime-500 text-sm">{{ $message }}</span>
+                                <span class="text-purple-500 text-sm">{{ $message }}</span>
                             @enderror
                         </div>
                     </div>
@@ -263,7 +263,7 @@
                         <input type="text" wire:model="shipping_address"
                             class="w-full border px-3 py-2 bg-gray-100 rounded">
                         @error('shipping_address')
-                            <span class="text-lime-500 text-sm">{{ $message }}</span>
+                            <span class="text-purple-500 text-sm">{{ $message }}</span>
                         @enderror
                     </div>
 
@@ -273,7 +273,7 @@
                             <input type="text" wire:model="shipping_postal_code"
                                 class="border px-3 py-2 bg-gray-100 rounded">
                             @error('shipping_postal_code')
-                                <span class="text-lime-500 text-sm">{{ $message }}</span>
+                                <span class="text-purple-500 text-sm">{{ $message }}</span>
                             @enderror
                         </div>
                         <div>
@@ -281,7 +281,7 @@
                             <input type="text" wire:model="shipping_city"
                                 class="border px-3 py-2 bg-gray-100 rounded">
                             @error('shipping_city')
-                                <span class="text-lime-500 text-sm">{{ $message }}</span>
+                                <span class="text-purple-500 text-sm">{{ $message }}</span>
                             @enderror
                         </div>
                     </div>
@@ -301,9 +301,9 @@
 
         <!-- Navigation -->
         <div class="flex justify-between mt-6">
-            <a href="{{ route('cart') }}" class="text-lime-600 hover:underline">« Panier</a>
+            <a href="{{ route('cart') }}" class="text-purple-600 hover:underline">« Panier</a>
             <button wire:click="goToNextStep"
-                class="bg-lime-600 text-white px-6 py-2 rounded hover:bg-lime-300">Suivant »</button>
+                class="bg-purple-600 text-white px-6 py-2 rounded hover:bg-purple-300">Suivant »</button>
         </div>
 
         <!-- ÉTAPE 2: Mode de paiement -->
@@ -315,7 +315,7 @@
                 @if (count($paymentMethods) > 0)
                     @foreach ($paymentMethods as $method)
                         <label
-                            class="flex items-center p-4 border rounded-lg {{ $payment_method == $method->code ? 'border-lime-500 bg-lime-50' : 'border-gray-200' }}">
+                            class="flex items-center p-4 border rounded-lg {{ $payment_method == $method->code ? 'border-purple-500 bg-purple-50' : 'border-gray-200' }}">
                             <input type="radio" wire:model.live="payment_method" value="{{ $method->code }}"
                                 class="mr-3">
                             <div>
@@ -343,8 +343,9 @@
 
             <!-- Navigation -->
             <div class="flex justify-between mt-6">
-                <button wire:click="goToPreviousStep" class="text-lime-600 hover:underline">« Retour</button>
-                <button wire:click="goToNextStep" class="bg-lime-600 text-white px-6 py-2 rounded hover:bg-lime-300"
+                <button wire:click="goToPreviousStep" class="text-purple-600 hover:underline">« Retour</button>
+                <button wire:click="goToNextStep"
+                    class="bg-purple-600 text-white px-6 py-2 rounded hover:bg-purple-300"
                     {{ count($paymentMethods) == 0 ? 'disabled' : '' }}>
                     Vérifier la commande »
                 </button>
@@ -370,7 +371,7 @@
                                     <h4 class="text-sm font-medium">{{ $item['product']['name'] }}</h4>
                                     <p class="text-xs text-gray-500">Quantité: {{ $item['quantity'] }}</p>
                                 </div>
-                                <div class="text-lime-700 font-medium">
+                                <div class="text-purple-700 font-medium">
                                     {{ number_format($item['product']['price'] * $item['quantity'], 2, ',', ' ') }}€
                                 </div>
                             </div>
@@ -384,7 +385,7 @@
                                     <h4 class="text-sm font-medium">{{ $item['product']['name'] }}</h4>
                                     <p class="text-xs text-gray-500">Quantité: {{ $item['quantity'] }}</p>
                                 </div>
-                                <div class="text-lime-700 font-medium">
+                                <div class="text-purple-700 font-medium">
                                     {{ number_format($item['product']['price'] * $item['quantity'], 2, ',', ' ') }}€
                                 </div>
                             </div>
@@ -495,7 +496,7 @@
                         </div>
                     @endif
                 @else
-                    <p class="text-lime-500">Méthode de paiement non disponible. Veuillez nous contacter.</p>
+                    <p class="text-purple-500">Méthode de paiement non disponible. Veuillez nous contacter.</p>
                 @endif
 
                 <!-- Upload de justificatif -->
@@ -503,10 +504,10 @@
                     <h4 class="font-semibold mb-2">Justificatif de paiement</h4>
                     <div class="border-2 border-dashed border-gray-300 rounded-lg p-4 text-center">
                         @if ($has_proof)
-                            <p class="text-green-600 mb-2"><i class="fas fa-check-circle mr-2"></i>Justificatif
+                            <p class="text-purple-600 mb-2"><i class="fas fa-check-circle mr-2"></i>Justificatif
                                 téléchargé</p>
                             <button wire:click="$set('has_proof', false)"
-                                class="text-sm text-lime-600 hover:underline">
+                                class="text-sm text-purple-600 hover:underline">
                                 Changer de fichier
                             </button>
                         @else
@@ -519,7 +520,7 @@
                                     accept=".jpg,.jpeg,.png,.pdf">
                             </label>
                             @error('payment_proof')
-                                <p class="text-lime-500 text-xs mt-2">{{ $message }}</p>
+                                <p class="text-purple-500 text-xs mt-2">{{ $message }}</p>
                             @enderror
                         @endif
                     </div>
@@ -528,9 +529,9 @@
 
             <!-- Navigation -->
             <div class="flex justify-between mt-6">
-                <button wire:click="goToPreviousStep" class="text-lime-600 hover:underline">« Retour</button>
+                <button wire:click="goToPreviousStep" class="text-purple-600 hover:underline">« Retour</button>
                 <button wire:click="createOrder"
-                    class="bg-lime-600 text-white px-6 py-2 rounded hover:bg-lime-300 disabled:bg-gray-400 disabled:cursor-not-allowed"
+                    class="bg-purple-600 text-white px-6 py-2 rounded hover:bg-purple-300 disabled:bg-gray-400 disabled:cursor-not-allowed"
                     {{ !$has_proof ? 'disabled' : '' }} wire:loading.attr="disabled" wire:target="createOrder">
                     <span wire:loading.remove wire:target="createOrder">
                         {{ !$has_proof ? 'Télécharger un justificatif pour continuer' : 'Confirmer la commande' }}

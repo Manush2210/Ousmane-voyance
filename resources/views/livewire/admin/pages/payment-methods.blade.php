@@ -5,7 +5,7 @@
         <div class="mt-4 md:mt-0 flex flex-col md:flex-row gap-3">
             <div class="relative">
                 <input type="text" wire:model.live="search" placeholder="Rechercher..."
-                    class="w-full md:w-64 bg-gray-800 border border-gray-700 text-white px-4 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-lime-500">
+                    class="w-full md:w-64 bg-gray-800 border border-gray-700 text-white px-4 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500">
                 <div class="absolute inset-y-0 right-0 flex items-center pr-3">
                     <svg class="h-5 w-5 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -15,7 +15,7 @@
             </div>
 
             <button wire:click="$dispatch('openModal')"
-                class="inline-flex items-center px-4 py-2 bg-lime-500 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-lime-600 active:bg-lime-700 focus:outline-none focus:border-lime-700 focus:ring focus:ring-lime-200 transition ease-in-out duration-150">
+                class="inline-flex items-center px-4 py-2 bg-purple-500 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-purple-600 active:bg-purple-700 focus:outline-none focus:border-purple-700 focus:ring focus:ring-purple-200 transition ease-in-out duration-150">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24"
                     stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -27,7 +27,7 @@
     </div>
 
     @if (session()->has('message'))
-        <div class="mb-4 p-4 bg-green-500 text-white rounded-md">
+        <div class="mb-4 p-4 bg-purple-500 text-white rounded-md">
             {{ session('message') }}
         </div>
     @endif
@@ -72,7 +72,7 @@
                         <td class="px-6 py-4 whitespace-nowrap">
                             @if ($method->is_active)
                                 <span
-                                    class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">
+                                    class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-purple-100 text-purple-800">
                                     Actif
                                 </span>
                             @else
@@ -93,7 +93,7 @@
                             </button>
                             <button wire:click="deletePaymentMethod({{ $method->id }})"
                                 onclick="return confirm('Êtes-vous sûr de vouloir supprimer ce moyen de paiement ?')"
-                                class="text-lime-500 hover:text-lime-700">
+                                class="text-purple-500 hover:text-purple-700">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none"
                                     viewBox="0 0 24 24" stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -132,7 +132,7 @@
                         <div class="text-right">
                             @if ($method->is_active)
                                 <span
-                                    class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">
+                                    class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-purple-100 text-purple-800">
                                     Actif
                                 </span>
                             @else
@@ -155,7 +155,7 @@
                         </button>
                         <button wire:click="deletePaymentMethod({{ $method->id }})"
                             onclick="return confirm('Êtes-vous sûr de vouloir supprimer ce moyen de paiement ?')"
-                            class="flex-1 bg-lime-500 text-white px-4 py-2 rounded-md hover:bg-lime-600 text-sm">
+                            class="flex-1 bg-purple-500 text-white px-4 py-2 rounded-md hover:bg-purple-600 text-sm">
                             Supprimer
                         </button>
                     </div>
@@ -165,7 +165,8 @@
 
         @if (count($paymentMethods) > 3 && !$showAll)
             <div class="text-center pt-4">
-                <button wire:click="$set('showAll', true)" class="text-lime-500 hover:text-lime-600 font-semibold">
+                <button wire:click="$set('showAll', true)"
+                    class="text-purple-500 hover:text-purple-600 font-semibold">
                     Voir plus
                 </button>
             </div>

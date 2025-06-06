@@ -17,7 +17,7 @@
                             <div
                                 class="w-full md:w-auto mb-8 md:mb-0 {{ $slide['action']['position'] ?? 'flex justify-center' }} z-20">
                                 <a href="{{ $slide['action']['url'] }}"
-                                    class="inline-block px-6 py-3 bg-lime-600 hover:bg-lime-500 text-white rounded-full shadow-xl transition-all duration-300 transform hover:scale-105 text-lg md:text-base font-medium">
+                                    class="inline-block px-6 py-3 bg-purple-600 hover:bg-purple-500 text-white rounded-full shadow-xl transition-all duration-300 transform hover:scale-105 text-lg md:text-base font-medium">
                                     {{ $slide['action']['text'] }}
                                 </a>
                             </div>

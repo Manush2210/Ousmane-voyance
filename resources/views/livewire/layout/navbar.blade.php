@@ -13,7 +13,7 @@
     }
 }" x-init="startTopBarCarousel()" class="md:relative sticky top-0 z-50 bg-white">
     <!-- Desktop Top Bar (Fixed) -->
-    <div class="bg-lime-300 text-white text-center py-2 hidden md:block font-semibold">
+    <div class="bg-purple-300 text-white text-center py-2 hidden md:block font-semibold">
         <div class="flex justify-center space-x-6">
             @foreach ($topBarItems as $item)
                 <div class="text-sm flex items-center">
@@ -28,7 +28,7 @@
     </div>
 
     <!-- Mobile Top Bar Carousel -->
-    <div class="bg-lime-600 text-white text-center py-2 md:hidden font-semibold">
+    <div class="bg-purple-600 text-white text-center py-2 md:hidden font-semibold">
         <div class="text-sm transition-opacity duration-500 flex items-center justify-center">
             <x-heroicon-s-check-circle class="h-4 w-4 mr-1 text-white" />
             <span x-text="topBarItems[currentTopBarItemIndex]"></span>
@@ -37,7 +37,9 @@
 
     <!-- Logo - Remove or hide this on mobile since we'll put it in the nav -->
     <div class="flex justify-center items-center mx-auto hidden md:flex">
-        <img src="{{ asset('assets/images/layout/logo.png') }}" alt="Logo" class="h-40 w-auto my-4" />
+        <a href="{{ route('home') }}">
+            <img src="{{ asset('assets/images/layout/logo.png') }}" alt="Logo" class="h-40 w-auto my-4" />
+        </a>
     </div>
 
     <!-- Main Navbar -->
@@ -46,20 +48,22 @@
             <!-- Mobile Navigation (justify-between with 3 elements) -->
             <div class="md:hidden flex items-center justify-between">
                 <!-- Burger Menu (left) -->
-                <button wire:click="toggleMenu" class="text-gray-600 hover:text-white hover:bg-lime-300 p-2">
+                <button wire:click="toggleMenu" class="text-gray-600 hover:text-white hover:bg-purple-300 p-2">
                     <x-heroicon-o-bars-3 class="h-6 w-6" />
                 </button>
 
                 <!-- Logo (center) -->
-                <img src="{{ asset('assets/images/layout/logo.png') }}" alt="Logo" class="h-16 w-auto" />
+                <a href="{{ route('home') }}">
+                    <img src="{{ asset('assets/images/layout/logo.png') }}" alt="Logo" class="h-16 w-auto" />
+                </a>
 
                 <!-- Shopping Cart (right) -->
                 <div x-data="{ mobileCartOpen: false }" class="relative">
                     <button @click="mobileCartOpen = !mobileCartOpen"
-                        class="text-gray-600 hover:text-white hover:bg-lime-300 p-2 relative">
+                        class="text-gray-600 hover:text-white hover:bg-purple-300 p-2 relative">
                         <x-heroicon-o-shopping-cart class="h-6 w-6" />
                         <span
-                            class="absolute -top-1 -right-1 bg-lime-600 text-white text-xs rounded-full h-4 w-4 flex items-center justify-center">{{ $cartItemCount }}</span>
+                            class="absolute -top-1 -right-1 bg-purple-600 text-white text-xs rounded-full h-4 w-4 flex items-center justify-center">{{ $cartItemCount }}</span>
                     </button>
 
                     <!-- Mobile Cart Dropdown -->
@@ -85,7 +89,7 @@
                                                 <h4 class="text-sm font-medium">{{ $item['product']['name'] }}</h4>
                                                 <p class="text-xs text-gray-500">Quantité: {{ $item['quantity'] }}</p>
                                             </div>
-                                            <div class="text-lime-700 font-medium">{{ $item['product']['price'] }}€
+                                            <div class="text-purple-700 font-medium">{{ $item['product']['price'] }}€
                                             </div>
                                         </div>
                                     @empty
@@ -123,7 +127,7 @@
                                         Voir le panier
                                     </a>
                                     <a href="#" wire:click="removeCart()"
-                                        class="block w-full bg-lime-300 text-white text-center py-2 rounded hover:bg-lime-800 text-sm font-medium">
+                                        class="block w-full bg-purple-300 text-white text-center py-2 rounded hover:bg-purple-800 text-sm font-medium">
                                         Effacer
                                     </a>
                                 </div>
@@ -137,38 +141,38 @@
             <div class="hidden md:flex justify-center  items-center space-x-6">
                 <hr class="w-24 text-gray-300  bg-gray-100" />
                 <a href="{{ route('home') }}"
-                    class="text-gray-800 hover:text-white hover:bg-lime-300 p-2 hover:rounded-lg">ACCUEIL</a>
+                    class="text-gray-800 hover:text-white hover:bg-purple-300 p-2 hover:rounded-lg">ACCUEIL</a>
                 <a href="{{ route('shop') }}"
-                    class="text-gray-800 hover:text-white hover:bg-lime-300 p-2 hover:rounded-lg">BOUTIQUE</a>
+                    class="text-gray-800 hover:text-white hover:bg-purple-300 p-2 hover:rounded-lg">BOUTIQUE</a>
                 <a href="{{ route('contact') }}"
-                    class="text-gray-800 hover:text-white hover:bg-lime-300 p-2 hover:rounded-lg">CONTACT</a>
+                    class="text-gray-800 hover:text-white hover:bg-purple-300 p-2 hover:rounded-lg">CONTACT</a>
                 <a href="{{ route('meeting') }}"
-                    class="text-gray-800 hover:text-white hover:bg-lime-300 p-2 hover:rounded-lg">PRISE DE
+                    class="text-gray-800 hover:text-white hover:bg-purple-300 p-2 hover:rounded-lg">PRISE DE
                     RENDEZ-VOUS</a>
                 @auth
                     <form method="POST" action="{{ route('logout') }}">
                         @csrf
                         <button type="submit"
-                            class="text-gray-800 hover:text-white hover:bg-lime-300 p-2 hover:rounded-lg">SE
+                            class="text-gray-800 hover:text-white hover:bg-purple-300 p-2 hover:rounded-lg">SE
                             DÉCONNECTER</button>
                     </form>
 
                 @endauth
 
 
-                <a href="{{ route('profile') }}" class="text-gray-600 hover:text-white hover:bg-lime-300 p-2">
+                <a href="{{ route('profile') }}" class="text-gray-600 hover:text-white hover:bg-purple-300 p-2">
                     <x-heroicon-s-user class="h-6 w-6" />
                 </a>
                 <button @click="$dispatch('open-search-modal')"
-                    class="text-gray-600 hover:text-white hover:bg-lime-300 p-2">
+                    class="text-gray-600 hover:text-white hover:bg-purple-300 p-2">
                     <x-heroicon-s-magnifying-glass class="h-6 w-6" />
                 </button>
                 <div x-data="{ cartOpen: false }" class="relative">
                     <button @click="cartOpen = !cartOpen"
-                        class="text-gray-600 hover:text-white hover:bg-lime-300 p-2 relative">
+                        class="text-gray-600 hover:text-white hover:bg-purple-300 p-2 relative">
                         <x-heroicon-s-shopping-cart class="h-6 w-6" />
                         <span
-                            class="absolute -top-1 -right-1 bg-lime-600 text-white text-xs rounded-full h-4 w-4 flex items-center justify-center">{{ $cartItemCount }}</span>
+                            class="absolute -top-1 -right-1 bg-purple-600 text-white text-xs rounded-full h-4 w-4 flex items-center justify-center">{{ $cartItemCount }}</span>
                     </button>
 
                     <!-- Cart Dropdown -->
@@ -194,7 +198,7 @@
                                                 <p class="text-xs text-gray-500">Quantité:
                                                     {{ $item['quantity'] . ' x ' . $item['product']['price'] }}€</p>
                                             </div>
-                                            <div class="text-lime-700 font-medium">{{ $item['product']['price'] }}€
+                                            <div class="text-purple-700 font-medium">{{ $item['product']['price'] }}€
                                             </div>
                                         </div>
                                     @empty
@@ -232,7 +236,7 @@
                                         Voir le panier
                                     </a>
                                     <a href="#" wire:click="removeCart()"
-                                        class="block w-full bg-lime-300 text-white text-center py-2 rounded hover:bg-lime-800 text-sm font-medium">
+                                        class="block w-full bg-purple-300 text-white text-center py-2 rounded hover:bg-purple-800 text-sm font-medium">
                                         Effacer
                                     </a>
                                 </div>
@@ -259,38 +263,38 @@
                 <div class="mt-12 mb-6">
                     <div class="relative">
                         <input type="text" wire:model.live.debounce.300ms="search" placeholder="Rechercher..."
-                            class="w-full py-2 px-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-lime-600">
+                            class="w-full py-2 px-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600">
                         <a href="{{ !empty($search) && strlen($search) >= 2 ? route('search', ['search' => $search]) : '#' }}"
                             @if (empty($search) || strlen($search) < 2) onclick="event.preventDefault(); alert('Veuillez saisir au moins 2 caractères');" @endif
-                            class="absolute right-3 top-2.5 text-gray-500 hover:text-lime-600">
+                            class="absolute right-3 top-2.5 text-gray-500 hover:text-purple-600">
                             <x-heroicon-s-magnifying-glass class="h-5 w-5" />
                         </a>
                     </div>
                     @if (!empty($search) && strlen($search) < 2)
-                        <p class="text-lime-500 text-xs mt-1">Veuillez saisir au moins 2 caractères</p>
+                        <p class="text-purple-500 text-xs mt-1">Veuillez saisir au moins 2 caractères</p>
                     @endif
                 </div>
 
                 <!-- Mobile Menu Items - Centered with hover effects -->
                 <div class="flex flex-col space-y-4">
                     <a href="{{ route('home') }}"
-                        class="text-gray-800 text-xl text-center py-2 hover:text-white hover:bg-lime-800">ACCUEIL</a>
+                        class="text-gray-800 text-xl text-center py-2 hover:text-white hover:bg-purple-800">ACCUEIL</a>
                     <a href="{{ route('shop') }}"
-                        class="text-gray-800 text-xl text-center py-2 hover:text-white hover:bg-lime-800">BOUTIQUE</a>
+                        class="text-gray-800 text-xl text-center py-2 hover:text-white hover:bg-purple-800">BOUTIQUE</a>
                     <a href="{{ route('contact') }}"
-                        class="text-gray-800 text-xl text-center py-2 hover:text-white hover:bg-lime-800">CONTACT</a>
+                        class="text-gray-800 text-xl text-center py-2 hover:text-white hover:bg-purple-800">CONTACT</a>
                     <a href="{{ route('meeting') }}"
-                        class="text-gray-800 text-xl text-center py-2 hover:text-white hover:bg-lime-800">PRISE DE
+                        class="text-gray-800 text-xl text-center py-2 hover:text-white hover:bg-purple-800">PRISE DE
                         RENDEZ-VOUS</a>
                     <a href="{{ route('profile') }}"
-                        class="text-gray-800 text-xl text-center py-2 hover:text-white hover:bg-lime-800">MON
+                        class="text-gray-800 text-xl text-center py-2 hover:text-white hover:bg-purple-800">MON
                         COMPTE</a>
 
                     @auth
                         <form method="POST" action="{{ route('logout') }}">
                             @csrf
                             <button type="submit"
-                                class="text-gray-800 text-xl text-center py-2 hover:text-white hover:bg-lime-800 w-full">SE
+                                class="text-gray-800 text-xl text-center py-2 hover:text-white hover:bg-purple-800 w-full">SE
                                 DÉCONNECTER</button>
                         </form>
                     @endauth
@@ -328,17 +332,17 @@
                         <input type="text" wire:model.live.debounce.300ms="search"
                             placeholder="Que recherchez-vous ?"
                             @keydown.enter="if (search.length >= 2) { window.location.href = '{{ route('search') }}/' + $wire.search }"
-                            class="w-full py-4 px-5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-lime-600 text-lg"
+                            class="w-full py-4 px-5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600 text-lg"
                             x-ref="searchInput" x-init="$nextTick(() => $refs.searchInput.focus())">
 
                         <a href="{{ route('search') }}/{{ '${$wire.search}' }}"
                             :class="{
                                 'cursor-not-allowed opacity-50': $wire.search.length < 2,
-                                'hover:bg-lime-300': $wire.search
+                                'hover:bg-purple-300': $wire.search
                                     .length >= 2
                             }"
                             @click.prevent="$wire.search.length >= 2 ? window.location.href = '{{ route('search') }}/' + $wire.search : ''"
-                            class="absolute right-2 top-2 bg-lime-600 text-white p-2 rounded-md">
+                            class="absolute right-2 top-2 bg-purple-600 text-white p-2 rounded-md">
                             <x-heroicon-s-magnifying-glass class="h-6 w-6" />
                         </a>
                     </div>
@@ -357,22 +361,22 @@
                         <div class="flex flex-wrap gap-2">
                             <button
                                 @click="$wire.search = 'cartes'; window.location.href = '{{ route('search') }}/cartes'"
-                                class="px-3 py-1 rounded-full bg-gray-100 text-gray-700 text-sm hover:bg-lime-50 hover:text-lime-700">
+                                class="px-3 py-1 rounded-full bg-gray-100 text-gray-700 text-sm hover:bg-purple-50 hover:text-purple-700">
                                 Cartes
                             </button>
                             <button
                                 @click="$wire.search = 'tarot'; window.location.href = '{{ route('search') }}/tarot'"
-                                class="px-3 py-1 rounded-full bg-gray-100 text-gray-700 text-sm hover:bg-lime-50 hover:text-lime-700">
+                                class="px-3 py-1 rounded-full bg-gray-100 text-gray-700 text-sm hover:bg-purple-50 hover:text-purple-700">
                                 Tarot
                             </button>
                             <button
                                 @click="$wire.search = 'pendule'; window.location.href = '{{ route('search') }}/pendule'"
-                                class="px-3 py-1 rounded-full bg-gray-100 text-gray-700 text-sm hover:bg-lime-50 hover:text-lime-700">
+                                class="px-3 py-1 rounded-full bg-gray-100 text-gray-700 text-sm hover:bg-purple-50 hover:text-purple-700">
                                 Pendule
                             </button>
                             <button
                                 @click="$wire.search = 'oracle'; window.location.href = '{{ route('search') }}/oracle'"
-                                class="px-3 py-1 rounded-full bg-gray-100 text-gray-700 text-sm hover:bg-lime-50 hover:text-lime-700">
+                                class="px-3 py-1 rounded-full bg-gray-100 text-gray-700 text-sm hover:bg-purple-50 hover:text-purple-700">
                                 Oracle
                             </button>
                         </div>

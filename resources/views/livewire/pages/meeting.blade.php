@@ -19,7 +19,7 @@
                     <img src="{{ asset('assets/images/layout/logo.png') }}" alt="logo"
                         class="mx-auto rounded-full h-20 w-20">
                     <div class="text-center space-y-4">
-                        <h4 class="text-lg text-gray-400 font-bold">Guidance spirituelle</h4>
+                        <h4 class="text-lg text-gray-400 font-bold">Voyance spirituelle Expert</h4>
                         <h1 class="font-bold text-3xl text-slate-700">Consultation privée</h1>
                         {{-- <div class="flex justify-center space-x-4 my-3 gap-4 text-gray-400">
                             <div class="flex items-center text-gray-400 gap-2">
@@ -115,7 +115,7 @@
                                 </div>
 
                                 @error('selectedConsultationType')
-                                    <div class="text-lime-500 text-sm mt-1">{{ $message }}</div>
+                                    <div class="text-purple-500 text-sm mt-1">{{ $message }}</div>
                                 @enderror
                             @else
                                 <div class="p-4 bg-yellow-50 text-yellow-800 rounded-md">
@@ -217,7 +217,7 @@
                                                 <div class="space-y-3 mb-4">
                                                     @foreach ($paymentMethods as $method)
                                                         <label
-                                                            class="flex items-center p-3 border rounded-lg {{ $selectedPaymentMethod == $method->code ? 'border-lime-500 bg-lime-50' : 'border-gray-200' }}">
+                                                            class="flex items-center p-3 border rounded-lg {{ $selectedPaymentMethod == $method->code ? 'border-purple-500 bg-purple-50' : 'border-gray-200' }}">
                                                             <input type="radio"
                                                                 wire:model.live="selectedPaymentMethod"
                                                                 value="{{ $method->code }}" class="mr-3">
@@ -322,7 +322,7 @@
 
                                         @if (session()->has('message'))
                                             <div
-                                                class="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded mb-4">
+                                                class="bg-purple-100 border border-purple-400 text-purple-700 px-4 py-3 rounded mb-4">
                                                 {{ session('message') }}
                                             </div>
                                         @endif
@@ -339,7 +339,7 @@
                                                     <option value="whatsapp">WhatsApp</option>
                                                 </select>
                                                 @error('contactMethod')
-                                                    <span class="text-lime-500 text-sm">{{ $message }}</span>
+                                                    <span class="text-purple-500 text-sm">{{ $message }}</span>
                                                 @enderror
                                             </div>
 
@@ -358,7 +358,7 @@
                                                 <input type="text" id="clientName" wire:model="clientName"
                                                     class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
                                                 @error('clientName')
-                                                    <span class="text-lime-500 text-sm">{{ $message }}</span>
+                                                    <span class="text-purple-500 text-sm">{{ $message }}</span>
                                                 @enderror
                                             </div>
 
@@ -367,19 +367,20 @@
                                                 <input type="email" id="clientEmail" wire:model="clientEmail"
                                                     class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
                                                 @error('clientEmail')
-                                                    <span class="text-lime-500 text-sm">{{ $message }}</span>
+                                                    <span class="text-purple-500 text-sm">{{ $message }}</span>
                                                 @enderror
                                             </div>
 
                                             <div>
                                                 <label for="clientPhone" class="block text-gray-700">Téléphone</label>
-                                                <p class="mt-1 text-xs text-lime-800">Veuillez inclure l'indicatif pays
+                                                <p class="mt-1 text-xs text-purple-800">Veuillez inclure l'indicatif
+                                                    pays
                                                     (ex: +33 pour la France)</p>
 
                                                 <input type="tel" id="clientPhone" wire:model="clientPhone"
                                                     class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
                                                 @error('clientPhone')
-                                                    <span class="text-lime-500 text-sm">{{ $message }}</span>
+                                                    <span class="text-purple-500 text-sm">{{ $message }}</span>
                                                 @enderror
                                             </div>
 
@@ -421,7 +422,7 @@
                                                     </div>
                                                 @endif
                                                 @error('paymentProof')
-                                                    <span class="text-lime-500 text-sm">{{ $message }}</span>
+                                                    <span class="text-purple-500 text-sm">{{ $message }}</span>
                                                 @enderror
                                             </div>
 
