@@ -14,6 +14,10 @@ class DatabaseSeeder extends Seeder
         $this->call([
             // Autres seeders...
             AdminUserSeeder::class,
+            ConsultationTypeSeeder::class,
+            PaymentMethodSeeder::class,
+            TimeSlotSeeder::class,
+
         ]);
     }
 }
