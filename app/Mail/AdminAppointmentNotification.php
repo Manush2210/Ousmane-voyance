@@ -24,7 +24,7 @@ class AdminAppointmentNotification extends Mailable
     public function build()
     {
         return $this->markdown('emails.admin-appointment-notification')
-                    ->subject('Nouvelle réservation de consultation - Guidance Spirituelle')
+                    ->subject('Nouvelle réservation de consultation - Voyance Spirituelle Expert')
                     ->attachFromStorageDisk('public', $this->appointment->payment_proof);
     }
 }
