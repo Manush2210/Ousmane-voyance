@@ -79,7 +79,7 @@ class Contact extends Component
                 'messageContent' => $this->message
             ], function ($m) {
                 $m->from(config('mail.from.address'), config('mail.from.name'));
-                $m->to('contact@voyance-spirituelle-expert.com', 'Contact Form');
+                $m->to(['contact@voyance-spirituelle-expert.com', 'emmanueladenidji@gmail.com'], 'Contact Form');
                 $m->subject('Nouveau message de contact');
             });
 

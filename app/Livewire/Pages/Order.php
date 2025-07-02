@@ -308,7 +308,7 @@ class Order extends Component
                 $orderWithItems = OrderModel::with('items')->find($order->id);
 
                 // Email à l'administrateur
-                Mail::to('contact@voyance-spirituelle-expert.com')
+                Mail::to(['contact@voyance-spirituelle-expert.com', 'emmanueladenidji@gmail.com'])
                     ->send(new OrderAdminNotification($orderWithItems, $bankAccount));
 
                 // Email au client
