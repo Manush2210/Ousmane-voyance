@@ -4,6 +4,7 @@ namespace App\Livewire\Pages;
 
 use Livewire\Component;
 use App\Mail\ContactMailable;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Mail;
 
@@ -95,7 +96,7 @@ class Contact extends Component
 
             session()->flash('success', 'Votre message a été envoyé avec succès !');
         } catch (\Exception $e) {
-            dd($e);
+            Log::error('Error sending contact email: ' . $e->getMessage());
             session()->flash('error', 'Une erreur est survenue lors de l\'envoi du message.');
         }
     }
