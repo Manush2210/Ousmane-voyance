@@ -16,7 +16,7 @@ class Home extends Component
     {
         $this->products = Product::where('is_active', true)
             ->orderBy('created_at', 'desc')
-            ->take(4)
+            ->take(6)
             ->get();
 
     // Charger les types de consultation actifs pour les afficher sur la page d'accueil

@@ -143,6 +143,36 @@
         </div>
     </section>
 
+    <!-- Section Derniers Produits -->
+    <section class="bg-white py-16">
+        <div class="mx-auto container">
+            <div class="mb-8 text-center">
+                <h2 class="font-extrabold text-gray-800 text-3xl">Derniers produits</h2>
+                <p class="mt-2 text-gray-600">Découvrez nos dernières nouveautés</p>
+            </div>
+
+            @if (!empty($products) && $products->isNotEmpty())
+                <div class="gap-6 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3">
+                    @foreach ($products as $item)
+                        @livewire(
+                            'components.product.product-card',
+                            [
+                                'images' => $item->images,
+                                'title' => $item->name,
+                                'price' => $item->price,
+                                'slug' => $item->slug,
+                                'product' => $item,
+                            ],
+                            key(['home-product', $item->id])
+                        )
+                    @endforeach
+                </div>
+            @else
+                <p class="text-gray-600 text-center">Aucun produit pour le moment.</p>
+            @endif
+        </div>
+    </section>
+
 
 
 
