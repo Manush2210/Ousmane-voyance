@@ -55,9 +55,8 @@ return [
                 ],
             ],
         ],
-        // custom mailler
-        'meeting'=>
-         [
+
+        'meeting'=> [
             'transport' => 'smtp',
             'scheme' => env('MAIL_SCHEME'),
             'url' => env('MAIL_URL'),
@@ -142,4 +141,4 @@ return [
     ],
 
 ];
-];
+
