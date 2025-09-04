@@ -7,10 +7,10 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
 use Illuminate\Mail\Mailables\Content;
 use Illuminate\Mail\Mailables\Envelope;
-use Illuminate\Mail\Mailables\Headers;
+//use Illuminate\Mail\Mailables\Headers;
 use Illuminate\Mail\Mailables\Address;
 use Illuminate\Queue\SerializesModels;
-use Illuminate\Mail\Mailables\Headers;
+//use Illuminate\Mail\Mailables\Headers;
 
 class ContactMailable extends Mailable
 {
@@ -34,14 +34,7 @@ class ContactMailable extends Mailable
     /**
      * Get the message headers.
      */
-    public function headers(): Headers
-    {
-        return new Headers(
-            text: [
-                'List-Unsubscribe' => 'mailto:contact@coaching-voyance.com',
-            ],
-        );
-    }
+
 
     /**
      * Get the message envelope.
