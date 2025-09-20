@@ -86,11 +86,11 @@ class Testimonial extends Model
             5 => 'mai', 6 => 'juin', 7 => 'juil.', 8 => 'août',
             9 => 'sept.', 10 => 'oct.', 11 => 'nov.', 12 => 'déc.'
         ];
-        
+
         $day = $this->created_at->day;
         $month = $months[$this->created_at->month];
         $year = $this->created_at->year;
-        
+
         return "{$day} {$month} {$year}";
     }
 }
