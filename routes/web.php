@@ -18,6 +18,7 @@ use App\Livewire\Auth\AdminLogin;
 use App\Livewire\Admin\Pages\Users;
 use Illuminate\Support\Facades\Auth;
 use App\Livewire\Admin\Pages\Settings;
+use App\Livewire\Admin\Pages\Testimonials;
 
 
 // Customer Account Area
@@ -122,6 +123,7 @@ Route::prefix('admin')->name('admin.')->middleware(['auth', 'admin'])->group(fun
     Route::get('/products', Products::class)->name('products');
     Route::get('/products/add', AddProduct::class)->name('products.add');
     Route::get('/consultation-types', ConsultationTypes::class)->name('consultation-types');
+    Route::get('/testimonials', Testimonials::class)->name('testimonials');
 
     // Site settings
     Route::get('/settings', Settings::class)->name('settings');

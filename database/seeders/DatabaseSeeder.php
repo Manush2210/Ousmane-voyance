@@ -17,7 +17,7 @@ class DatabaseSeeder extends Seeder
             ConsultationTypeSeeder::class,
             PaymentMethodSeeder::class,
             TimeSlotSeeder::class,
-
+            TestimonialSeeder::class,
         ]);
     }
 }

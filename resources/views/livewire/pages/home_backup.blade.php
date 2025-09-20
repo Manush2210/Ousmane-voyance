@@ -274,121 +274,139 @@
     <section class="bg-gray-100 py-16 testimonies">
         <div class="mx-auto container">
             <h2 class="mb-12 font-semibold text-gray-800 text-4xl text-center">Ce que disent nos clients</h2>
-
-            @if (!empty($testimonials) && $testimonials->isNotEmpty())
-                <div class="gap-8 grid md:grid-cols-2 lg:grid-cols-4">
-                    @foreach ($testimonials as $testimonial)
-                        <div class="bg-white shadow-lg p-6 rounded-lg hover:scale-105 transition duration-300 transform">
-                            <div class="flex justify-center mb-4">
-                                @if ($testimonial->photo)
-                                    <div class="rounded-full w-12 h-12 overflow-hidden">
-                                        <img src="{{ $testimonial->photo_url }}" alt="{{ $testimonial->name }}"
-                                             class="w-full h-full object-cover">
-                                    </div>
-                                @else
-                                    <div class="flex justify-center items-center bg-teal-500 rounded-full w-12 h-12">
-                                        <span class="font-bold text-white text-xl">{{ $testimonial->initial }}</span>
-                                    </div>
-                                @endif
-                            </div>
-
-                            {{-- Rating avec étoiles --}}
-                            <div class="flex justify-center mb-3">
-                                <div class="text-yellow-400 text-lg">
-                                    @for ($i = 1; $i <= 5; $i++)
-                                        @if ($i <= $testimonial->rating)
-                                            ★
-                                        @else
-                                            ☆
-                                        @endif
-                                    @endfor
-                                </div>
-                            </div>
-
-                            <p class="mb-4 text-gray-600">"{{ $testimonial->message }}"</p>
-
-                            <div class="flex justify-center items-center">
-                                <span class="font-medium text-teal-500">{{ $testimonial->name }}</span>
-                            </div>
-
-                            {{-- Date du témoignage --}}
-                            <div class="flex justify-center items-center mt-2">
-                                <span class="text-gray-400 text-sm">{{ $testimonial->formatted_date }}</span>
-                            </div>
-                        </div>
-                    @endforeach
-                </div>
-            @else
-                {{-- Fallback si aucun témoignage en base --}}
-                <div class="gap-8 grid md:grid-cols-2 lg:grid-cols-4">
-                    {{-- Témoignage de Marie --}}
-                    <div class="bg-white shadow-lg p-6 rounded-lg hover:scale-105 transition duration-300 transform">
-                        <div class="flex justify-center mb-4">
-                            <div class="flex justify-center items-center bg-teal-500 rounded-full w-12 h-12">
-                                <span class="font-bold text-white text-xl">M</span>
-                            </div>
-                        </div>
-                        <div class="flex justify-center mb-3">
-                            <div class="text-yellow-400 text-lg">★★★★★</div>
-                        </div>
-                        <p class="mb-4 text-gray-600">"Les oracles de bienveillance et d'amour m'accompagnent chaque jour.
-                            Ils m'aident à trouver de la clarté"</p>
-                        <div class="flex justify-center items-center">
-                            <span class="font-medium text-teal-500">Marie</span>
+            <div class="gap-8 grid md:grid-cols-2 lg:grid-cols-4">
+                {{-- Témoignage de Marie --}}
+                <div class="bg-white shadow-lg p-6 rounded-lg hover:scale-105 transition duration-300 transform">
+                    <div class="flex justify-center mb-4">
+                        <div class="flex justify-center items-center bg-teal-500 rounded-full w-12 h-12">
+                            <span class="font-bold text-white text-xl">M</span>
                         </div>
                     </div>
-
-                    {{-- Témoignage de Christelle --}}
-                    <div class="bg-white shadow-lg p-6 rounded-lg hover:scale-105 transition duration-300 transform">
-                        <div class="flex justify-center mb-4">
-                            <div class="flex justify-center items-center bg-teal-500 rounded-full w-12 h-12">
-                                <span class="font-bold text-white text-xl">C</span>
-                            </div>
-                        </div>
-                        <div class="flex justify-center mb-3">
-                            <div class="text-yellow-400 text-lg">★★★★★</div>
-                        </div>
-                        <p class="mb-4 text-gray-600">"Chaque tirage est une occasion d'en apprendre davantage sur moi-même
-                            et de trouver un équilibre"</p>
-                        <div class="flex justify-center items-center">
-                            <span class="font-medium text-teal-500">Christelle</span>
-                        </div>
-                    </div>
-
-                    {{-- Témoignage de Franck --}}
-                    <div class="bg-white shadow-lg p-6 rounded-lg hover:scale-105 transition duration-300 transform">
-                        <div class="flex justify-center mb-4">
-                            <div class="flex justify-center items-center bg-teal-500 rounded-full w-12 h-12">
-                                <span class="font-bold text-white text-xl">F</span>
-                            </div>
-                        </div>
-                        <div class="flex justify-center mb-3">
-                            <div class="text-yellow-400 text-lg">★★★★☆</div>
-                        </div>
-                        <p class="mb-4 text-gray-600">"Franchement, tirer une carte, ça m'aide à y voir plus clair et à
-                            prendre du recul sur pas mal de choses."</p>
-                        <div class="flex justify-center items-center">
-                            <span class="font-medium text-teal-500">Franck</span>
-                        </div>
-                    </div>
-
-                    {{-- Témoignage de Mélissa --}}
-                    <div class="bg-white shadow-lg p-6 rounded-lg hover:scale-105 transition duration-300 transform">
-                        <div class="flex justify-center mb-4">
-                            <div class="flex justify-center items-center bg-teal-500 rounded-full w-12 h-12">
-                                <span class="font-bold text-white text-xl">M</span>
-                            </div>
-                        </div>
-                        <div class="flex justify-center mb-3">
-                            <div class="text-yellow-400 text-lg">★★★★★</div>
-                        </div>
-                        <p class="mb-4 text-gray-600">"Génial ! Livraison rapide !"</p>
-                        <div class="flex justify-center items-center">
-                            <span class="font-medium text-teal-500">Mélissa</span>
-                        </div>
+                    <p class="mb-4 text-gray-600">"Les oracles de bienveillance et d'amour m'accompagnent chaque jour.
+                        Ils m'aident à trouver de la clarté"</p>
+                    <div class="flex justify-center items-center">
+                        <span class="font-medium text-teal-500">Marie</span>
                     </div>
                 </div>
-            @endif
+
+                {{-- Témoignage de Christelle --}}
+                <div class="bg-white shadow-lg p-6 rounded-lg hover:scale-105 transition duration-300 transform">
+                    <div class="flex justify-center mb-4">
+                        <div class="flex justify-center items-center bg-teal-500 rounded-full w-12 h-12">
+                            <span class="font-bold text-white text-xl">C</span>
+                        </div>
+                    </div>
+                    <p class="mb-4 text-gray-600">"Chaque tirage est une occasion d'en apprendre davantage sur moi-même
+                        et de trouver un équilibre"</p>
+                    <div class="flex justify-center items-center">
+                        <span class="font-medium text-teal-500">Christelle</span>
+                    </div>
+                </div>
+
+                {{-- Témoignage de Franck --}}
+                <div class="bg-white shadow-lg p-6 rounded-lg hover:scale-105 transition duration-300 transform">
+                    <div class="flex justify-center mb-4">
+                        <div class="flex justify-center items-center bg-teal-500 rounded-full w-12 h-12">
+                            <span class="font-bold text-white text-xl">F</span>
+                        </div>
+                    </div>
+                    <p class="mb-4 text-gray-600">"Franchement, tirer une carte, ça m'aide à y voir plus clair et à
+                        prendre du recul sur pas mal de choses."</p>
+                    <div class="flex justify-center items-center">
+                        <span class="font-medium text-teal-500">Franck</span>
+                    </div>
+                </div>
+
+                {{-- Témoignage de Mélissa --}}
+                <div class="bg-white shadow-lg p-6 rounded-lg hover:scale-105 transition duration-300 transform">
+                    <div class="flex justify-center mb-4">
+                        <div class="flex justify-center items-center bg-teal-500 rounded-full w-12 h-12">
+                            <span class="font-bold text-white text-xl">M</span>
+                        </div>
+                    </div>
+                    <p class="mb-4 text-gray-600">"Génial ! Livraison rapide !"</p>
+                    <div class="flex justify-center items-center">
+                        <span class="font-medium text-teal-500">Mélissa</span>
+                    </div>
+                </div>
+                {{-- Témoignage de Sophie --}}
+                <div class="bg-white shadow-lg p-6 rounded-lg hover:scale-105 transition duration-300 transform">
+                    <div class="flex justify-center mb-4">
+                        <div class="flex justify-center items-center bg-teal-500 rounded-full w-12 h-12">
+                            <span class="font-bold text-white text-xl">S</span>
+                        </div>
+                    </div>
+                    <p class="mb-4 text-gray-600">"Une expérience transformatrice ! Les conseils sont justes et m'aident vraiment dans ma vie quotidienne."</p>
+                    <div class="flex justify-center items-center">
+                        <span class="font-medium text-teal-500">Sophie</span>
+                    </div>
+                </div>
+
+                {{-- Témoignage de Laurent --}}
+                <div class="bg-white shadow-lg p-6 rounded-lg hover:scale-105 transition duration-300 transform">
+                    <div class="flex justify-center mb-4">
+                        <div class="flex justify-center items-center bg-teal-500 rounded-full w-12 h-12">
+                            <span class="font-bold text-white text-xl">L</span>
+                        </div>
+                    </div>
+                    <p class="mb-4 text-gray-600">"J'étais sceptique au début, mais les tirages sont vraiment pertinents. Ça m'aide à mieux comprendre mes émotions."</p>
+                    <div class="flex justify-center items-center">
+                        <span class="font-medium text-teal-500">Laurent</span>
+                    </div>
+                </div>
+
+                {{-- Témoignage d'Isabelle --}}
+                <div class="bg-white shadow-lg p-6 rounded-lg hover:scale-105 transition duration-300 transform">
+                    <div class="flex justify-center mb-4">
+                        <div class="flex justify-center items-center bg-teal-500 rounded-full w-12 h-12">
+                            <span class="font-bold text-white text-xl">I</span>
+                        </div>
+                    </div>
+                    <p class="mb-4 text-gray-600">"Un accompagnement bienveillant et professionnel. Les consultations m'apportent la sérénité dont j'avais besoin."</p>
+                    <div class="flex justify-center items-center">
+                        <span class="font-medium text-teal-500">Isabelle</span>
+                    </div>
+                </div>
+
+                {{-- Témoignage de Thomas --}}
+                <div class="bg-white shadow-lg p-6 rounded-lg hover:scale-105 transition duration-300 transform">
+                    <div class="flex justify-center mb-4">
+                        <div class="flex justify-center items-center bg-teal-500 rounded-full w-12 h-12">
+                            <span class="font-bold text-white text-xl">T</span>
+                        </div>
+                    </div>
+                    <p class="mb-4 text-gray-600">"Les outils proposés sont excellents. J'utilise régulièrement les tirages en ligne, c'est très pratique."</p>
+                    <div class="flex justify-center items-center">
+                        <span class="font-medium text-teal-500">Thomas</span>
+                    </div>
+                </div>
+
+                {{-- Témoignage d'Amélie --}}
+                <div class="bg-white shadow-lg p-6 rounded-lg hover:scale-105 transition duration-300 transform">
+                    <div class="flex justify-center mb-4">
+                        <div class="flex justify-center items-center bg-teal-500 rounded-full w-12 h-12">
+                            <span class="font-bold text-white text-xl">A</span>
+                        </div>
+                    </div>
+                    <p class="mb-4 text-gray-600">"Une approche respectueuse et éclairante. Chaque séance m'apporte de nouvelles perspectives sur ma vie."</p>
+                    <div class="flex justify-center items-center">
+                        <span class="font-medium text-teal-500">Amélie</span>
+                    </div>
+                </div>
+
+                {{-- Témoignage de David --}}
+                <div class="bg-white shadow-lg p-6 rounded-lg hover:scale-105 transition duration-300 transform">
+                    <div class="flex justify-center mb-4">
+                        <div class="flex justify-center items-center bg-teal-500 rounded-full w-12 h-12">
+                            <span class="font-bold text-white text-xl">D</span>
+                        </div>
+                    </div>
+                    <p class="mb-4 text-gray-600">"Service de qualité avec des produits authentiques. Je recommande vivement cette plateforme."</p>
+                    <div class="flex justify-center items-center">
+                        <span class="font-medium text-teal-500">David</span>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 </div>
