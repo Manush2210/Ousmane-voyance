@@ -151,7 +151,7 @@ class Home extends Component
             $this->generateMathChallenge();
 
             session()->flash('testimonial_success',
-                'Merci pour votre témoignage ! Il sera examiné et publié prochainement.');
+                'Merci pour votre témoignage ! Il sera publié prochainement.');
 
         } catch (\Exception $e) {
             session()->flash('testimonial_error',
