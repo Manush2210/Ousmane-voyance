@@ -89,8 +89,10 @@
                              <h3 class="mb-2 font-semibold text-gray-800">Informations de paiement</h3>
                              <div class="space-y-2 bg-gray-100 p-4 rounded-lg text-sm">
                                 <p><strong class="text-gray-600">Banque:</strong> {{ $account->bank }}</p>
+                                <p><strong class="text-gray-600">Titulaire du compte:</strong> {{ $account->owner }}</p>
                                 <p><strong class="text-gray-600">IBAN:</strong> {{ $account->iban }}</p>
                                 <p><strong class="text-gray-600">BIC/SWIFT:</strong> {{ $account->swift }}</p>
+                                <p><strong class="text-gray-600">Pays:</strong> {{ $account->country }}</p>
                                 <p class="mt-2 text-gray-500 text-xs">Veuillez effectuer le virement et joindre la preuve de paiement à l'étape suivante.</p>
                              </div>
                         </div>

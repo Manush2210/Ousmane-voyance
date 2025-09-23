@@ -32,11 +32,6 @@
                             <dd><a class="text-teal-600 hover:text-teal-800" href="https://wa.me/{{ App\Models\Setting::get('contact_phone') ?? '33612345678' }}" target="_blank" rel="noopener">{{ App\Models\Setting::get('contact_phone') ?? '+33 6 12 34 56 78' }} (WhatsApp)</a></dd>
                         </div>
                     </dl>
-
-                    <!-- Vidéo intégrée (plus petite et mieux placée) -->
-                    <div class="mt-10 w-full aspect-video">
-                        <iframe class="shadow-lg rounded-xl w-full h-full" src="https://www.youtube.com/embed/b7gAzEIPm-w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    </div>
                 </div>
 
                 <!-- Section Droite : Formulaire -->
