@@ -524,4 +524,39 @@
             </div>
         </div>
     </section>
+
+    <!-- Section Message de bienvenue personnel -->
+    <section class="bg-gradient-to-br from-teal-50 to-blue-50 py-16">
+        <div class="mx-auto container">
+            <div class="mx-auto max-w-4xl">
+                <div class="bg-white shadow-xl p-8 md:p-12 border border-teal-100 rounded-2xl text-center">
+                    <div class="mb-6">
+                        <div class="inline-flex justify-center items-center bg-teal-100 mx-auto rounded-full w-16 h-16">
+                            <svg class="w-8 h-8 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                            </svg>
+                        </div>
+                    </div>
+
+                    <div class="space-y-6 text-gray-700 leading-relaxed">
+                        <p class="text-lg md:text-xl">
+                            <span class="font-medium text-teal-800">Merci d'avoir choisi de visiter cet espace.</span>
+                        </p>
+                        <p class="text-lg md:text-xl">
+                            Un lieu pensé pour vous accueillir, vous écouter, et surtout, vous éclairer avec respect, justesse et sincérité.
+                        </p>
+                        <p class="text-lg md:text-xl">
+                            Ici, chaque âme est accueillie avec bienveillance, sans jugement. Qu'il s'agisse d'un besoin urgent de réponses, d'un questionnement sentimental, professionnel ou spirituel, ou simplement d'une envie d'y voir plus clair, <span class="font-medium text-teal-800">vous êtes ici chez vous.</span>
+                        </p>
+                    </div>
+
+                    <div class="mt-8 pt-6 border-t border-teal-200">
+                        <p class="font-medium text-gray-800 text-xl">
+                            Namaste 🙏
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 </div>
