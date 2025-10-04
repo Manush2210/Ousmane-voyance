@@ -182,7 +182,7 @@
                                      <option value="">Méthode de contact préférée*</option>
                                      <option value="email">Email</option>
                                      <option value="whatsapp">WhatsApp</option>
-                                     <option value="telephone">Téléphone</option>
+                                     {{-- <option value="telephone">Téléphone</option> --}}
                                  </select>
                                  <textarea wire:model="notes" placeholder="Notes (optionnel)" class="rounded-md w-full" rows="3"></textarea>
 
