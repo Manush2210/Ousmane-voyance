@@ -15,7 +15,6 @@ class Navbar extends Component
     public $popularSearches = [
         'cartes', 'tarot', 'pendule', 'oracle'
     ];
-
     public $topBarItems = [
         'Cartes et Jeux Divinatoires',
         'Service client personnalisé',
