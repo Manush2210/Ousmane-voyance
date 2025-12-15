@@ -39,10 +39,10 @@ return [
 
         'smtp' => [
             'transport' => 'smtp',
-            'scheme' => env('MAIL_SCHEME'),
+            'scheme' => null,
             'url' => env('MAIL_URL'),
             'host' => 'smtp.hostinger.com',
-            'port' => env('MAIL_PORT', 2525),
+            'port' => 587,
             'username' => env('MAIL_USERNAME'),
             'password' => env('MAIL_PASSWORD'),
             'timeout' => null,
@@ -55,13 +55,12 @@ return [
                 ],
             ],
         ],
-
         'contact' => [
             'transport' => 'smtp',
-            'scheme' => env('MAIL_SCHEME'),
+            'scheme' => null,
             'url' => env('MAIL_URL'),
-            'host' => env('MAIL_HOST', '127.0.0.1'),
-            'port' => env('MAIL_PORT', 2525),
+            'host' => 'smtp.hostinger.com',
+            'port' => 587,
             // Use explicit env keys for meeting mail credentials
             'username' => env('MEETING_MAIL_USERNAME', 'contact@auxane-voyance.com'),
             'password' => env('MEETING_MAIL_PASSWORD', 'Monsite@2025'),
