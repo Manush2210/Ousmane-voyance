@@ -23,7 +23,7 @@
     </div>
 
     @if (session()->has('message'))
-        <div class="bg-teal-300 mb-6 p-4 rounded-md text-white">
+        <div class="bg-emerald-300 mb-6 p-4 rounded-md text-white">
             {{ session('message') }}
         </div>
     @endif
@@ -65,12 +65,12 @@
                         <td class="px-6 py-4 whitespace-nowrap">
                             @if ($product->is_active)
                                 <span
-                                    class="inline-flex bg-teal-100 px-2 rounded-full font-semibold text-teal-800 text-xs leading-5">
+                                    class="inline-flex bg-emerald-100 px-2 rounded-full font-semibold text-emerald-800 text-xs leading-5">
                                     Actif
                                 </span>
                             @else
                                 <span
-                                    class="inline-flex bg-teal-100 px-2 rounded-full font-semibold text-teal-800 text-xs leading-5">
+                                    class="inline-flex bg-emerald-100 px-2 rounded-full font-semibold text-emerald-800 text-xs leading-5">
                                     Inactif
                                 </span>
                             @endif
@@ -86,7 +86,7 @@
                                 </button>
                                 <button wire:click="deleteProduct({{ $product->id }})"
                                     onclick="return confirm('Êtes-vous sûr de vouloir supprimer ce produit ?')"
-                                    class="text-teal-400 hover:text-teal-600">
+                                    class="text-emerald-400 hover:text-emerald-600">
                                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                             d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
@@ -113,11 +113,11 @@
                     <div class="flex justify-between items-center mb-3 text-sm">
                         <span class="text-gray-500">{{ $product->created_at->format('d M Y') }}</span>
                         @if ($product->is_active)
-                            <span class="bg-teal-50 px-2 py-1 rounded-full font-medium text-teal-700 text-xs">
+                            <span class="bg-emerald-50 px-2 py-1 rounded-full font-medium text-emerald-700 text-xs">
                                 Actif
                             </span>
                         @else
-                            <span class="bg-teal-50 px-2 py-1 rounded-full font-medium text-teal-700 text-xs">
+                            <span class="bg-emerald-50 px-2 py-1 rounded-full font-medium text-emerald-700 text-xs">
                                 Inactif
                             </span>
                         @endif
@@ -160,7 +160,7 @@
                         </button>
                         <button wire:click="deleteProduct({{ $product->id }})"
                             onclick="return confirm('Êtes-vous sûr de vouloir supprimer ce produit ?')"
-                            class="inline-flex items-center hover:bg-teal-50 px-3 py-1.5 border border-teal-600 rounded-md font-medium text-teal-600 text-sm">
+                            class="inline-flex items-center hover:bg-emerald-50 px-3 py-1.5 border border-emerald-600 rounded-md font-medium text-emerald-600 text-sm">
                             <svg class="mr-1.5 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />

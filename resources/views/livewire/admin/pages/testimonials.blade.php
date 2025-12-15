@@ -38,7 +38,7 @@
                             <img src="{{ asset('storage/' . $testimonial->photo) }}" alt="{{ $testimonial->name }}"
                                 class="rounded-full w-12 h-12 object-cover">
                         @else
-                            <div class="flex justify-center items-center bg-teal-500 rounded-full w-12 h-12">
+                            <div class="flex justify-center items-center bg-emerald-500 rounded-full w-12 h-12">
                                 <span class="font-bold text-white text-xl">{{ $testimonial->initial }}</span>
                             </div>
                         @endif
@@ -117,7 +117,7 @@
                         <img src="{{ asset('storage/' . $testimonial->photo) }}" alt="{{ $testimonial->name }}"
                             class="rounded-full w-10 h-10 object-cover">
                     @else
-                        <div class="flex justify-center items-center bg-teal-500 rounded-full w-10 h-10">
+                        <div class="flex justify-center items-center bg-emerald-500 rounded-full w-10 h-10">
                             <span class="font-bold text-white">{{ $testimonial->initial }}</span>
                         </div>
                     @endif
@@ -238,19 +238,19 @@
                         <!-- Boutons prédéfinis -->
                         <div class="flex flex-wrap gap-2 mt-2">
                             <button type="button" wire:click="setCreatedAtToNow"
-                                class="bg-teal-600 hover:bg-teal-700 px-2 py-1 rounded text-white text-xs">
+                                class="bg-emerald-600 hover:bg-emerald-700 px-2 py-1 rounded text-white text-xs">
                                 Maintenant
                             </button>
                             <button type="button" wire:click="setCreatedAtToYesterday"
-                                class="bg-teal-600 hover:bg-teal-700 px-2 py-1 rounded text-white text-xs">
+                                class="bg-emerald-600 hover:bg-emerald-700 px-2 py-1 rounded text-white text-xs">
                                 Hier
                             </button>
                             <button type="button" wire:click="setCreatedAtToLastWeek"
-                                class="bg-teal-600 hover:bg-teal-700 px-2 py-1 rounded text-white text-xs">
+                                class="bg-emerald-600 hover:bg-emerald-700 px-2 py-1 rounded text-white text-xs">
                                 Il y a 1 semaine
                             </button>
                             <button type="button" wire:click="setCreatedAtToLastMonth"
-                                class="bg-teal-600 hover:bg-teal-700 px-2 py-1 rounded text-white text-xs">
+                                class="bg-emerald-600 hover:bg-emerald-700 px-2 py-1 rounded text-white text-xs">
                                 Il y a 1 mois
                             </button>
                             <button type="button" wire:click="$set('created_at', '')"

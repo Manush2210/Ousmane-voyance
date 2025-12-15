@@ -27,7 +27,7 @@
             </div>
 
             <div class="flex justify-end">
-                <button type="submit" class="inline-flex items-center bg-teal-600 hover:bg-teal-700 px-4 py-2 rounded-md text-white">Sauvegarder</button>
+                <button type="submit" class="inline-flex items-center bg-emerald-600 hover:bg-emerald-700 px-4 py-2 rounded-md text-white">Sauvegarder</button>
             </div>
         </form>
     </div>

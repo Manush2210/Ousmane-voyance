@@ -11,7 +11,6 @@ use Illuminate\Support\Facades\Mail;
 
 class Contact extends Component
 {
-    public $turnstileToken = '';
     public $name = '';
     public $email = '';
     public $message = '';
@@ -32,47 +31,11 @@ class Contact extends Component
         'message.min' => 'Le message doit contenir au moins 10 caractères',
     ];
 
-    protected function verifyTurnstile()
-    {
-        $response = Http::asForm()->post('https://challenges.cloudflare.com/turnstile/v0/siteverify', [
-            'secret' => config('services.cloudflare.secret_key'),
-            'response' => $this->turnstileToken,
-            'remoteip' => request()->ip(),
-        ]);
 
-        $result = $response->json();
-        // dd($result);
-
-        return $result['success'] ?? false;
-    }
 
     public function submit()
     {
-        // More effective honeypot check - if filled, silently fail
-        $turnstileToken = $this->turnstileToken;
-        // dd($turnstileToken);
-
-        if (!$turnstileToken) {
-            session()->flash('error', 'La vérification de sécurité a échoué. Veuillez réessayer.');
-            return;
-        }
-
-        // Vérifier le token Turnstile
-        if (!$this->verifyTurnstile()) {
-            session()->flash('error', 'La vérification de sécurité a échoué. Veuillez réessayer.');
-            return;
-        }
-        // Add a timing check (bots usually submit forms too quickly)
-        // $timestamp = session('form_time');
-        // $now = time();
-
-        // If the form was submitted less than 2 seconds after page load, likely a bot
-        // if (!$timestamp || ($now - $timestamp < 2)) {
-        //     session()->flash('success', 'Votre message a été envoyé avec succès !');
-        //     return;
-        // }
-
-        $this->validate();
+        $validate = $this->validate();
 
         try {
             Log::info('Sending contact email', [
@@ -80,9 +43,11 @@ class Contact extends Component
                 'email' => $this->email,
                 'message' => $this->message,
             ]);
-            Mail::mailer('contact')->to(['contact@monde-de-elodie.com', Setting::get('email') ?? ''])
-                ->send(new ContactMailable($this->name, $this->email, $this->message));
 
+            if ($validate) {
+                Mail::mailer('contact')->to(['contact@auxane-voyance.com', Setting::get('email') ?? ''])
+                    ->send(new ContactMailable($this->name, $this->email, $this->message));
+            }
 
 
             // Reset form fields

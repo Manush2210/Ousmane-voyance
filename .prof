@@ -1,8 +1,8 @@
-APP_NAME="Le monde d'Elodie"
+APP_NAME="Le monde d'Auxane"
 APP_ENV=production
 APP_KEY=base64:6Bisbju4KHi3SX7SJ1Q4eayYIWinDL0tvQKXAf7xEwE=
 APP_DEBUG=true
-APP_URL=http://monde-de-elodie.com
+APP_URL=http://auxane-voyance.com
 
 APP_LOCALE=en
 APP_FALLBACK_LOCALE=en

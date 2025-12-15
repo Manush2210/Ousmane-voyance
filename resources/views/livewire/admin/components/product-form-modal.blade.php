@@ -18,7 +18,7 @@
 
                 <form wire:submit="save" class="space-y-4">
                     @if (session()->has('message'))
-                        <div class="bg-teal-300 p-4 rounded-md text-white">
+                        <div class="bg-emerald-300 p-4 rounded-md text-white">
                             {{ session('message') }}
                         </div>
                     @endif
@@ -27,7 +27,7 @@
                         <label class="block mb-2 text-white/50">Nom</label>
                         <input type="text" wire:model="name" class="bg-gray-900 p-2 rounded-md w-full text-white">
                         @error('name')
-                            <span class="text-teal-500 text-sm">{{ $message }}</span>
+                            <span class="text-emerald-500 text-sm">{{ $message }}</span>
                         @enderror
                     </div>
 
@@ -35,7 +35,7 @@
                         <label class="block mb-2 text-white/50">Description</label>
                         <textarea wire:model="description" class="bg-gray-900 p-2 rounded-md w-full text-white" rows="4"></textarea>
                         @error('description')
-                            <span class="text-teal-500 text-sm">{{ $message }}</span>
+                            <span class="text-emerald-500 text-sm">{{ $message }}</span>
                         @enderror
                     </div>
 
@@ -45,7 +45,7 @@
                             <input type="number" wire:model="price" step="0.01"
                                 class="bg-gray-900 p-2 rounded-md w-full text-white">
                             @error('price')
-                                <span class="text-teal-500 text-sm">{{ $message }}</span>
+                                <span class="text-emerald-500 text-sm">{{ $message }}</span>
                             @enderror
                         </div>
 
@@ -54,7 +54,7 @@
                             <input type="number" wire:model="stock"
                                 class="bg-gray-900 p-2 rounded-md w-full text-white">
                             @error('stock')
-                                <span class="text-teal-500 text-sm">{{ $message }}</span>
+                                <span class="text-emerald-500 text-sm">{{ $message }}</span>
                             @enderror
                         </div>
                     </div>
@@ -72,7 +72,7 @@
                             @endif
                         </div>
                         @error('image')
-                            <span class="text-teal-500 text-sm">{{ $message }}</span>
+                            <span class="text-emerald-500 text-sm">{{ $message }}</span>
                         @enderror
                     </div>
 
@@ -83,7 +83,7 @@
                                     <img src="{{ is_string($image) ? Storage::url($image) : $image->temporaryUrl() }}"
                                         class="rounded-lg w-24 h-24 object-cover">
                                     <button type="button" wire:click="removeImage({{ $index }})"
-                                        class="-top-2 -right-2 absolute bg-teal-500 p-1 rounded-full text-white">
+                                        class="-top-2 -right-2 absolute bg-emerald-500 p-1 rounded-full text-white">
                                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                                 d="M6 18L18 6M6 6l12 12" />

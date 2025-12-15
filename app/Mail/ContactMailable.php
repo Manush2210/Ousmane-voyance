@@ -42,7 +42,7 @@ class ContactMailable extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
-            from: new Address(env('MAIL_FROM_ADDRESS', 'contact@monde-de-elodie.com'), env('MAIL_FROM_NAME', 'Contact')),
+            from: new Address(env('MAIL_FROM_ADDRESS', 'contact@auxane-voyance.com'), env('MAIL_FROM_NAME', 'Contact')),
             replyTo: [new Address($this->email)],
             subject: 'Formulaire de contact - Voyance Spirituelle Expert',
         );

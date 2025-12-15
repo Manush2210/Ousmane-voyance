@@ -103,7 +103,7 @@
             @endif
 
             <p>Pour toute question: <a
-                    href="mailto:contact@monde-de-elodie.com">contact@monde-de-elodie.com</a></p>
+                    href="mailto:contact@auxane-voyance.com">contact@auxane-voyance.com</a></p>
 
             <p>Merci de votre confiance!</p>
         </div>

@@ -19,14 +19,14 @@
                 <input type="text" id="first_name" wire:model="first_name"
                     class="px-4 py-2 border rounded-lg w-full">
                 @error('first_name')
-                    <span class="text-teal-500 text-sm">{{ $message }}</span>
+                    <span class="text-emerald-500 text-sm">{{ $message }}</span>
                 @enderror
             </div>
             <div>
                 <label for="last_name" class="block mb-1 font-medium text-gray-700">Nom</label>
                 <input type="text" id="last_name" wire:model="last_name" class="px-4 py-2 border rounded-lg w-full">
                 @error('last_name')
-                    <span class="text-teal-500 text-sm">{{ $message }}</span>
+                    <span class="text-emerald-500 text-sm">{{ $message }}</span>
                 @enderror
             </div>
         </div>
@@ -35,7 +35,7 @@
             <label for="name" class="block mb-1 font-medium text-gray-700">Nom d'utilisateur</label>
             <input type="text" id="name" wire:model="name" class="px-4 py-2 border rounded-lg w-full">
             @error('name')
-                <span class="text-teal-500 text-sm">{{ $message }}</span>
+                <span class="text-emerald-500 text-sm">{{ $message }}</span>
             @enderror
         </div>
 
@@ -43,7 +43,7 @@
             <label for="email" class="block mb-1 font-medium text-gray-700">Email</label>
             <input type="email" id="email" wire:model="email" class="px-4 py-2 border rounded-lg w-full">
             @error('email')
-                <span class="text-teal-500 text-sm">{{ $message }}</span>
+                <span class="text-emerald-500 text-sm">{{ $message }}</span>
             @enderror
         </div>
 
@@ -51,7 +51,7 @@
             <label for="phone" class="block mb-1 font-medium text-gray-700">Téléphone</label>
             <input type="text" id="phone" wire:model="phone" class="px-4 py-2 border rounded-lg w-full">
             @error('phone')
-                <span class="text-teal-500 text-sm">{{ $message }}</span>
+                <span class="text-emerald-500 text-sm">{{ $message }}</span>
             @enderror
         </div>
 
@@ -59,7 +59,7 @@
             <label for="address" class="block mb-1 font-medium text-gray-700">Adresse</label>
             <input type="text" id="address" wire:model="address" class="px-4 py-2 border rounded-lg w-full">
             @error('address')
-                <span class="text-teal-500 text-sm">{{ $message }}</span>
+                <span class="text-emerald-500 text-sm">{{ $message }}</span>
             @enderror
         </div>
 
@@ -69,14 +69,14 @@
                 <input type="text" id="postal_code" wire:model="postal_code"
                     class="px-4 py-2 border rounded-lg w-full">
                 @error('postal_code')
-                    <span class="text-teal-500 text-sm">{{ $message }}</span>
+                    <span class="text-emerald-500 text-sm">{{ $message }}</span>
                 @enderror
             </div>
             <div>
                 <label for="city" class="block mb-1 font-medium text-gray-700">Ville</label>
                 <input type="text" id="city" wire:model="city" class="px-4 py-2 border rounded-lg w-full">
                 @error('city')
-                    <span class="text-teal-500 text-sm">{{ $message }}</span>
+                    <span class="text-emerald-500 text-sm">{{ $message }}</span>
                 @enderror
             </div>
         </div>
@@ -95,7 +95,7 @@
             <label for="password" class="block mb-1 font-medium text-gray-700">Mot de passe</label>
             <input type="password" id="password" wire:model="password" class="px-4 py-2 border rounded-lg w-full">
             @error('password')
-                <span class="text-teal-500 text-sm">{{ $message }}</span>
+                <span class="text-emerald-500 text-sm">{{ $message }}</span>
             @enderror
         </div>
 
@@ -107,7 +107,7 @@
         </div>
 
         <button type="submit"
-            class="bg-teal-600 hover:bg-teal-300 px-4 py-2 rounded-lg w-full text-white transition duration-200">
+            class="bg-emerald-600 hover:bg-emerald-300 px-4 py-2 rounded-lg w-full text-white transition duration-200">
             S'inscrire
         </button>
     </form>
@@ -115,7 +115,7 @@
     <div class="mt-6 text-center">
         <p class="text-gray-600">
             Déjà inscrit?
-            <a href="{{ route('login') }}" class="text-teal-600 hover:underline">Se connecter</a>
+            <a href="{{ route('login') }}" class="text-emerald-600 hover:underline">Se connecter</a>
         </p>
     </div>
 </div>

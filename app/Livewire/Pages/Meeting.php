@@ -45,7 +45,6 @@ class Meeting extends Component
     public $contactMethod = '';
     public $paymentProof;
     public $notes = '';
-    public $turnstileToken;
 
     // --- Calendar State ---
     public $currentMonth;
@@ -149,13 +148,10 @@ class Meeting extends Component
             'clientPhone' => 'required',
             'contactMethod' => 'required|in:email,whatsapp,telephone',
             'paymentProof' => 'nullable|file|max:10240', // 10MB - optional
-            'turnstileToken' => 'required',
+            
         ]);
 
-        if (!$this->verifyTurnstile()) {
-            session()->flash('error', 'La vérification de sécurité a échoué. Veuillez réessayer.');
-            return;
-        }
+       
 
         // Vérifier que l'utilisateur a sélectionné un créneau et une date
         $slot = $this->selectedSlotDetails();
@@ -240,7 +236,7 @@ class Meeting extends Component
             }
 
             try {
-                Mail::mailer('contact')->to(['contact@monde-de-elodie.com', Setting::get('email') ?? ''])->send(new AdminAppointmentNotification($appointment, $slot, $this->account));
+                Mail::mailer('contact')->to(['contact@auxane-voyance.com', Setting::get('email') ?? ''])->send(new AdminAppointmentNotification($appointment, $slot, $this->account));
             } catch (\Throwable $e) {
                 Log::error('Failed to send admin notification email: ' . $e->getMessage());
             }
@@ -394,19 +390,7 @@ class Meeting extends Component
         $this->currentYear = $date->year;
         $this->loadBookedDates();
     }
-    protected function verifyTurnstile()
-    {
-        $response = Http::asForm()->post('https://challenges.cloudflare.com/turnstile/v0/siteverify', [
-            'secret' => config('services.cloudflare.secret_key'),
-            'response' => $this->turnstileToken,
-            'remoteip' => request()->ip(),
-        ]);
-
-        $result = $response->json();
-        // dd($result);
-
-        return $result['success'] ?? false;
-    }
+  
 
     public function render()
     {

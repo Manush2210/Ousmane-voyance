@@ -44,7 +44,7 @@
                 <div class="flex md:flex-row flex-col md:justify-between md:items-start gap-4">
                     <div class="flex-1">
                         <div class="flex items-center gap-3 mb-3">
-                            <div class="flex justify-center items-center bg-teal-500 rounded-full w-10 h-10">
+                            <div class="flex justify-center items-center bg-emerald-500 rounded-full w-10 h-10">
                                 <span class="font-bold text-white">{{ strtoupper(substr($testimonial->name, 0, 1)) }}</span>
                             </div>
                             <div>

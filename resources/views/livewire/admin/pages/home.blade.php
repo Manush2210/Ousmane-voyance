@@ -45,7 +45,7 @@
             <h4 class="font-bold text-white text-2xl text-center capitalize">Cuisine</h4>
             <p class="text-white/50">55 members</p>
             <p class="inline-flex top-2 absolute items-center text-white/20 text-xs">22 Online <span
-                    class="block bg-teal-300 ml-2 rounded-full w-2 h-2 group-hover:animate-pulse"></span></p>
+                    class="block bg-emerald-300 ml-2 rounded-full w-2 h-2 group-hover:animate-pulse"></span></p>
         </div>
         <div
             class="group relative flex flex-col items-center space-y-2 bg-gray-900 hover:bg-gray-900/80 px-4 py-10 sm:py-20 rounded-md cursor-pointer hover:smooth-hover">
@@ -55,7 +55,7 @@
             <h4 class="font-bold text-white text-2xl text-center capitalize">Art</h4>
             <p class="text-white/50">132 members</p>
             <p class="inline-flex top-2 absolute items-center text-white/20 text-xs">4 Online <span
-                    class="block bg-teal-300 ml-2 rounded-full w-2 h-2 group-hover:animate-pulse"></span></p>
+                    class="block bg-emerald-300 ml-2 rounded-full w-2 h-2 group-hover:animate-pulse"></span></p>
         </div>
         <div
             class="group relative flex flex-col items-center space-y-2 bg-gray-900 hover:bg-gray-900/80 px-4 py-10 sm:py-20 rounded-md cursor-pointer hover:smooth-hover">
@@ -65,7 +65,7 @@
             <h4 class="font-bold text-white text-2xl text-center capitalize">Gaming</h4>
             <p class="text-white/50">207 members</p>
             <p class="inline-flex top-2 absolute items-center text-white/20 text-xs">0 Online <span
-                    class="block bg-teal-400 ml-2 rounded-full w-2 h-2 group-hover:animate-pulse"></span></p>
+                    class="block bg-emerald-400 ml-2 rounded-full w-2 h-2 group-hover:animate-pulse"></span></p>
         </div>
         <div
             class="group relative flex flex-col items-center space-y-2 bg-gray-900 hover:bg-gray-900/80 px-4 py-10 sm:py-20 rounded-md cursor-pointer hover:smooth-hover">
@@ -75,7 +75,7 @@
             <h4 class="font-bold text-white text-2xl text-center capitalize">cinema</h4>
             <p class="text-white/50">105 members</p>
             <p class="inline-flex top-2 absolute items-center text-white/20 text-xs">12 Online <span
-                    class="block bg-teal-300 ml-2 rounded-full w-2 h-2 group-hover:animate-pulse"></span></p>
+                    class="block bg-emerald-300 ml-2 rounded-full w-2 h-2 group-hover:animate-pulse"></span></p>
         </div>
         <div
             class="group relative flex flex-col items-center space-y-2 bg-gray-900 hover:bg-gray-900/80 px-4 py-10 sm:py-20 rounded-md cursor-pointer hover:smooth-hover">
@@ -85,7 +85,7 @@
             <h4 class="font-bold text-white text-2xl text-center capitalize">Song</h4>
             <p class="text-white/50">67 members</p>
             <p class="inline-flex top-2 absolute items-center text-white/20 text-xs">3 Online <span
-                    class="block bg-teal-300 ml-2 rounded-full w-2 h-2 group-hover:animate-pulse"></span></p>
+                    class="block bg-emerald-300 ml-2 rounded-full w-2 h-2 group-hover:animate-pulse"></span></p>
         </div>
         <div
             class="group relative flex flex-col items-center space-y-2 bg-gray-900 hover:bg-gray-900/80 px-4 py-10 sm:py-20 rounded-md cursor-pointer hover:smooth-hover">
@@ -95,7 +95,7 @@
             <h4 class="font-bold text-white text-2xl text-center capitalize">Code</h4>
             <p class="text-white/50">83 members</p>
             <p class="inline-flex top-2 absolute items-center text-white/20 text-xs">43 Online <span
-                    class="block bg-teal-300 ml-2 rounded-full w-2 h-2 group-hover:animate-pulse"></span></p>
+                    class="block bg-emerald-300 ml-2 rounded-full w-2 h-2 group-hover:animate-pulse"></span></p>
         </div>
         <div
             class="group relative flex flex-col items-center space-y-2 bg-gray-900 hover:bg-gray-900/80 px-4 py-10 sm:py-20 rounded-md cursor-pointer hover:smooth-hover">
@@ -105,7 +105,7 @@
             <h4 class="font-bold text-white text-2xl text-center capitalize">Dancing</h4>
             <p class="text-white/50">108 members</p>
             <p class="inline-flex top-2 absolute items-center text-white/20 text-xs">86 Online <span
-                    class="block bg-teal-300 ml-2 rounded-full w-2 h-2 group-hover:animate-pulse"></span></p>
+                    class="block bg-emerald-300 ml-2 rounded-full w-2 h-2 group-hover:animate-pulse"></span></p>
         </div>
     </div>
 </div>

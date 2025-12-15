@@ -7,7 +7,7 @@
 
     <!-- Informations produit -->
     <div class="flex-1">
-        <h2 class="font-bold text-teal-700 text-base sm:text-lg">
+        <h2 class="font-bold text-emerald-700 text-base sm:text-lg">
             <a href="{{ route('single-product', ['slug' => $slug]) }}" class="hover:underline">{{ $title }}</a>
         </h2>
         <p class="font-semibold text-gray-700 sm:text-md text-sm">{{ number_format($price, 2, ',', ' ') }} €</p>
@@ -15,23 +15,23 @@
 
         <!-- Lien voir détails -->
         <a href="{{ route('single-product', ['slug' => $slug]) }}"
-            class="block mt-1 sm:mt-2 font-semibold text-teal-500 text-xs sm:text-sm underline">+ Voir les détails</a>
+            class="block mt-1 sm:mt-2 font-semibold text-emerald-500 text-xs sm:text-sm underline">+ Voir les détails</a>
 
         <!-- Boutons -->
         <div class="flex space-x-1 sm:space-x-2 mt-2 sm:mt-3">
             <button wire:click="addToCart({{ $product->id }})"
-                class="bg-teal-600 hover:bg-teal-300 px-2 sm:px-4 py-1 sm:py-2 rounded-lg text-white text-xs sm:text-sm">
+                class="bg-emerald-600 hover:bg-emerald-300 px-2 sm:px-4 py-1 sm:py-2 rounded-lg text-white text-xs sm:text-sm">
                 Ajouter au panier
             </button>
             <button
-                class="hover:bg-teal-100 px-2 sm:px-4 py-1 sm:py-2 border border-teal-600 rounded-lg text-teal-600 text-xs sm:text-sm">
+                class="hover:bg-emerald-100 px-2 sm:px-4 py-1 sm:py-2 border border-emerald-600 rounded-lg text-emerald-600 text-xs sm:text-sm">
                 ❤️
             </button>
         </div>
 
         <!-- Message de succès -->
         @if (session()->has('message'))
-            <p class="mt-1 sm:mt-2 text-teal-600 text-xs sm:text-sm">{{ session('message') }}</p>
+            <p class="mt-1 sm:mt-2 text-emerald-600 text-xs sm:text-sm">{{ session('message') }}</p>
         @endif
     </div>
 </div>

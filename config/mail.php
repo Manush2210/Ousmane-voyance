@@ -14,7 +14,7 @@ return [
     |
     */
 
-    'default' => env('MAIL_MAILER', 'smtp'),
+    'default' => 'smtp',
 
     /*
     |--------------------------------------------------------------------------
@@ -63,10 +63,10 @@ return [
             'host' => env('MAIL_HOST', '127.0.0.1'),
             'port' => env('MAIL_PORT', 2525),
             // Use explicit env keys for meeting mail credentials
-            'username' => env('MEETING_MAIL_USERNAME', 'contact@monde-de-elodie.com'),
+            'username' => env('MEETING_MAIL_USERNAME', 'contact@auxane-voyance.com'),
             'password' => env('MEETING_MAIL_PASSWORD', 'Monsite@2025'),
             // Ensure 'from' contains both address and name to avoid runtime errors
-            'from' => ['address' => env('MEETING_MAIL_FROM_ADDRESS', 'contact@monde-de-elodie.com'), 'name' => 'Le Monde d\'Élodie  - Réservations'],
+            'from' => ['address' => env('MEETING_MAIL_FROM_ADDRESS', 'contact@auxane-voyance.com'), 'name' => 'Le Monde d\'Auxane  - Réservations'],
             'timeout' => null,
             'local_domain' => env('MAIL_EHLO_DOMAIN', parse_url(env('APP_URL', 'http://localhost'), PHP_URL_HOST)),
             'stream' => [
@@ -83,9 +83,9 @@ return [
             'url' => env('MAIL_URL'),
             'host' => env('MAIL_HOST', '127.0.0.1'),
             'port' => env('MAIL_PORT', 2525),
-            'username' => env('SUPPORT_MAIL_USERNAME', 'support@monde-de-elodie.com'),
+            'username' => env('SUPPORT_MAIL_USERNAME', 'support@auxane-voyance.com'),
             'password' => env('SUPPORT_MAIL_PASSWORD', 'Monsite@2025'),
-            'from' => ['address' => env('SUPPORT_MAIL_FROM_ADDRESS', 'support@monde-de-elodie.com'), 'name' => 'Le Monde d\'Élodie  - Support'],
+            'from' => ['address' => env('SUPPORT_MAIL_FROM_ADDRESS', 'support@auxane-voyance.com'), 'name' => 'Le Monde d\'Auxane  - Support'],
             'timeout' => null,
             'local_domain' => env('MAIL_EHLO_DOMAIN', parse_url(env('APP_URL', 'http://localhost'), PHP_URL_HOST)),
             'stream' => [
@@ -103,9 +103,9 @@ return [
             'url' => env('MAIL_URL'),
             'host' => env('MAIL_HOST', '127.0.0.1'),
             'port' => env('MAIL_PORT', 2525),
-            'username' => env('ORDER_MAIL_USERNAME', 'order@monde-de-elodie.com'),
+            'username' => env('ORDER_MAIL_USERNAME', 'order@auxane-voyance.com'),
             'password' => env('ORDER_MAIL_PASSWORD', 'Monsite@2025'),
-            'from' => ['address' => env('ORDER_MAIL_FROM_ADDRESS', 'order@monde-de-elodie.com'), 'name' => 'Le Monde d\'Élodie  - Commandes'],
+            'from' => ['address' => env('ORDER_MAIL_FROM_ADDRESS', 'order@auxane-voyance.com'), 'name' => 'Le Monde d\'Auxane  - Commandes'],
             'timeout' => null,
             'local_domain' => env('MAIL_EHLO_DOMAIN', parse_url(env('APP_URL', 'http://localhost'), PHP_URL_HOST)),
             'stream' => [
@@ -177,8 +177,8 @@ return [
     */
 
     'from' => [
-        'address' => env('MAIL_FROM_ADDRESS', 'hello@example.com'),
-        'name' => env('MAIL_FROM_NAME', 'Example'),
+        'address' => 'noreply@auxane-voyance.com',
+        'name' =>'Auxane voyhance',
     ],
 
 ];

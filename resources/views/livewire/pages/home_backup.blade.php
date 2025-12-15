@@ -20,14 +20,14 @@
             <div class="items-center gap-12 grid grid-cols-1 md:grid-cols-2">
                 <!-- Colonne de l'image -->
                 <div class="shadow-2xl rounded-lg overflow-hidden">
-                    <img src="{{ asset('assets/images/digi-v.jpg') }}" alt="Le monde d'Elodie Voyance"
+                    <img src="{{ asset('assets/images/digi-v.jpg') }}" alt="Le monde d'Auxane Voyance"
                         class="w-full h-auto object-center object-cover hover:scale-105 transition-transform duration-500 ease-in-out transform">
                 </div>
 
                 <!-- Colonne des fonctionnalités -->
                 <div class="space-y-8">
                     <div>
-                        <h3 class="mb-4 font-bold text-teal-700 text-2xl">Ce que notre plateforme vous réserve :</h3>
+                        <h3 class="mb-4 font-bold text-emerald-700 text-2xl">Ce que notre plateforme vous réserve :</h3>
                         <p class="text-gray-700 leading-relaxed">
                             Nous avons créé un espace sécurisé et bienveillant pour vous offrir des outils de guidance
                             clairs et des ressources exclusives. Naviguez avec simplicité et trouvez les réponses que
@@ -39,7 +39,7 @@
                         <li class="flex items-start">
                             <div class="flex-shrink-0">
                                 <span
-                                    class="flex justify-center items-center bg-teal-100 rounded-full w-12 h-12 text-teal-600">
+                                    class="flex justify-center items-center bg-emerald-100 rounded-full w-12 h-12 text-emerald-600">
                                     <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none"
                                         viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -57,7 +57,7 @@
                         <li class="flex items-start">
                             <div class="flex-shrink-0">
                                 <span
-                                    class="flex justify-center items-center bg-teal-100 rounded-full w-12 h-12 text-teal-600">
+                                    class="flex justify-center items-center bg-emerald-100 rounded-full w-12 h-12 text-emerald-600">
                                     <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none"
                                         viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -77,7 +77,7 @@
                         <li class="flex items-start">
                             <div class="flex-shrink-0">
                                 <span
-                                    class="flex justify-center items-center bg-teal-100 rounded-full w-12 h-12 text-teal-600">
+                                    class="flex justify-center items-center bg-emerald-100 rounded-full w-12 h-12 text-emerald-600">
                                     <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none"
                                         viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -95,7 +95,7 @@
 
                     <div class="mt-10">
                         <a href="{{ route('meeting') }}"
-                            class="inline-block inline-flex items-center gap-3 bg-teal-600 hover:bg-teal-700 shadow-lg px-8 py-3 rounded-lg font-bold text-white transition-all hover:-translate-y-1 duration-300 transform">
+                            class="inline-block inline-flex items-center gap-3 bg-emerald-600 hover:bg-emerald-700 shadow-lg px-8 py-3 rounded-lg font-bold text-white transition-all hover:-translate-y-1 duration-300 transform">
                             <svg class="w-5 h-5 text-white animate-bounce" xmlns="http://www.w3.org/2000/svg" fill="none"
                                 viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
@@ -129,10 +129,10 @@
                             <h3 class="font-semibold text-gray-800 text-xl">{{ $type->name }}</h3>
                             <p class="mt-2 text-gray-600">{{ Str::limit($type->description, 120) }}</p>
                             <div class="flex justify-between items-center mt-4">
-                                <div class="font-bold text-teal-700 text-lg">
+                                <div class="font-bold text-emerald-700 text-lg">
                                     {{ number_format($type->price, 2, ',', ' ') }} €</div>
                                 <a href="{{ route('meeting') }}?type={{ $type->id }}"
-                                    class="bg-teal-600 hover:bg-teal-700 px-4 py-2 rounded text-white">Réserver</a>
+                                    class="bg-emerald-600 hover:bg-emerald-700 px-4 py-2 rounded text-white">Réserver</a>
                             </div>
                         </div>
                     @endforeach
@@ -205,7 +205,7 @@
                 <div class="lg:col-span-3">
                     <div class="space-y-8">
                         <div>
-                            <h3 class="mb-3 font-bold text-teal-700 text-2xl">Qui suis-je ?</h3>
+                            <h3 class="mb-3 font-bold text-emerald-700 text-2xl">Qui suis-je ?</h3>
                             <p class="text-gray-700 leading-relaxed">
                                 Passionné par les arts divinatoires et le développement personnel, j'ai consacré ma vie
                                 à affiner mon don de clairvoyance pour offrir des guidances claires et utiles. Mon
@@ -218,7 +218,7 @@
                         <div class="flex items-start">
                             <div class="flex-shrink-0">
                                 <span
-                                    class="flex justify-center items-center bg-teal-100 rounded-full w-12 h-12 text-teal-600">
+                                    class="flex justify-center items-center bg-emerald-100 rounded-full w-12 h-12 text-emerald-600">
                                     <!-- Icône pour la mission/vision -->
                                     <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none"
                                         viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
@@ -241,7 +241,7 @@
                         <div class="flex items-start">
                             <div class="flex-shrink-0">
                                 <span
-                                    class="flex justify-center items-center bg-teal-100 rounded-full w-12 h-12 text-teal-600">
+                                    class="flex justify-center items-center bg-emerald-100 rounded-full w-12 h-12 text-emerald-600">
                                     <!-- Icône pour l'éthique/confiance -->
                                     <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none"
                                         viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
@@ -260,7 +260,7 @@
                     </div>
 
                     <!-- Citation inspirante -->
-                    <div class="mt-10 pl-4 border-teal-500 border-l-4">
+                    <div class="mt-10 pl-4 border-emerald-500 border-l-4">
                         <p class="text-gray-600 italic">
                             "Mon plus grand souhait est que vous repartiez de notre séance avec plus de sérénité et de
                             force pour avancer."
@@ -278,132 +278,132 @@
                 {{-- Témoignage de Marie --}}
                 <div class="bg-white shadow-lg p-6 rounded-lg hover:scale-105 transition duration-300 transform">
                     <div class="flex justify-center mb-4">
-                        <div class="flex justify-center items-center bg-teal-500 rounded-full w-12 h-12">
+                        <div class="flex justify-center items-center bg-emerald-500 rounded-full w-12 h-12">
                             <span class="font-bold text-white text-xl">M</span>
                         </div>
                     </div>
                     <p class="mb-4 text-gray-600">"Les oracles de bienveillance et d'amour m'accompagnent chaque jour.
                         Ils m'aident à trouver de la clarté"</p>
                     <div class="flex justify-center items-center">
-                        <span class="font-medium text-teal-500">Marie</span>
+                        <span class="font-medium text-emerald-500">Marie</span>
                     </div>
                 </div>
 
                 {{-- Témoignage de Christelle --}}
                 <div class="bg-white shadow-lg p-6 rounded-lg hover:scale-105 transition duration-300 transform">
                     <div class="flex justify-center mb-4">
-                        <div class="flex justify-center items-center bg-teal-500 rounded-full w-12 h-12">
+                        <div class="flex justify-center items-center bg-emerald-500 rounded-full w-12 h-12">
                             <span class="font-bold text-white text-xl">C</span>
                         </div>
                     </div>
                     <p class="mb-4 text-gray-600">"Chaque tirage est une occasion d'en apprendre davantage sur moi-même
                         et de trouver un équilibre"</p>
                     <div class="flex justify-center items-center">
-                        <span class="font-medium text-teal-500">Christelle</span>
+                        <span class="font-medium text-emerald-500">Christelle</span>
                     </div>
                 </div>
 
                 {{-- Témoignage de Franck --}}
                 <div class="bg-white shadow-lg p-6 rounded-lg hover:scale-105 transition duration-300 transform">
                     <div class="flex justify-center mb-4">
-                        <div class="flex justify-center items-center bg-teal-500 rounded-full w-12 h-12">
+                        <div class="flex justify-center items-center bg-emerald-500 rounded-full w-12 h-12">
                             <span class="font-bold text-white text-xl">F</span>
                         </div>
                     </div>
                     <p class="mb-4 text-gray-600">"Franchement, tirer une carte, ça m'aide à y voir plus clair et à
                         prendre du recul sur pas mal de choses."</p>
                     <div class="flex justify-center items-center">
-                        <span class="font-medium text-teal-500">Franck</span>
+                        <span class="font-medium text-emerald-500">Franck</span>
                     </div>
                 </div>
 
                 {{-- Témoignage de Mélissa --}}
                 <div class="bg-white shadow-lg p-6 rounded-lg hover:scale-105 transition duration-300 transform">
                     <div class="flex justify-center mb-4">
-                        <div class="flex justify-center items-center bg-teal-500 rounded-full w-12 h-12">
+                        <div class="flex justify-center items-center bg-emerald-500 rounded-full w-12 h-12">
                             <span class="font-bold text-white text-xl">M</span>
                         </div>
                     </div>
                     <p class="mb-4 text-gray-600">"Génial ! Livraison rapide !"</p>
                     <div class="flex justify-center items-center">
-                        <span class="font-medium text-teal-500">Mélissa</span>
+                        <span class="font-medium text-emerald-500">Mélissa</span>
                     </div>
                 </div>
                 {{-- Témoignage de Sophie --}}
                 <div class="bg-white shadow-lg p-6 rounded-lg hover:scale-105 transition duration-300 transform">
                     <div class="flex justify-center mb-4">
-                        <div class="flex justify-center items-center bg-teal-500 rounded-full w-12 h-12">
+                        <div class="flex justify-center items-center bg-emerald-500 rounded-full w-12 h-12">
                             <span class="font-bold text-white text-xl">S</span>
                         </div>
                     </div>
                     <p class="mb-4 text-gray-600">"Une expérience transformatrice ! Les conseils sont justes et m'aident vraiment dans ma vie quotidienne."</p>
                     <div class="flex justify-center items-center">
-                        <span class="font-medium text-teal-500">Sophie</span>
+                        <span class="font-medium text-emerald-500">Sophie</span>
                     </div>
                 </div>
 
                 {{-- Témoignage de Laurent --}}
                 <div class="bg-white shadow-lg p-6 rounded-lg hover:scale-105 transition duration-300 transform">
                     <div class="flex justify-center mb-4">
-                        <div class="flex justify-center items-center bg-teal-500 rounded-full w-12 h-12">
+                        <div class="flex justify-center items-center bg-emerald-500 rounded-full w-12 h-12">
                             <span class="font-bold text-white text-xl">L</span>
                         </div>
                     </div>
                     <p class="mb-4 text-gray-600">"J'étais sceptique au début, mais les tirages sont vraiment pertinents. Ça m'aide à mieux comprendre mes émotions."</p>
                     <div class="flex justify-center items-center">
-                        <span class="font-medium text-teal-500">Laurent</span>
+                        <span class="font-medium text-emerald-500">Laurent</span>
                     </div>
                 </div>
 
                 {{-- Témoignage d'Isabelle --}}
                 <div class="bg-white shadow-lg p-6 rounded-lg hover:scale-105 transition duration-300 transform">
                     <div class="flex justify-center mb-4">
-                        <div class="flex justify-center items-center bg-teal-500 rounded-full w-12 h-12">
+                        <div class="flex justify-center items-center bg-emerald-500 rounded-full w-12 h-12">
                             <span class="font-bold text-white text-xl">I</span>
                         </div>
                     </div>
                     <p class="mb-4 text-gray-600">"Un accompagnement bienveillant et professionnel. Les consultations m'apportent la sérénité dont j'avais besoin."</p>
                     <div class="flex justify-center items-center">
-                        <span class="font-medium text-teal-500">Isabelle</span>
+                        <span class="font-medium text-emerald-500">Isabelle</span>
                     </div>
                 </div>
 
                 {{-- Témoignage de Thomas --}}
                 <div class="bg-white shadow-lg p-6 rounded-lg hover:scale-105 transition duration-300 transform">
                     <div class="flex justify-center mb-4">
-                        <div class="flex justify-center items-center bg-teal-500 rounded-full w-12 h-12">
+                        <div class="flex justify-center items-center bg-emerald-500 rounded-full w-12 h-12">
                             <span class="font-bold text-white text-xl">T</span>
                         </div>
                     </div>
                     <p class="mb-4 text-gray-600">"Les outils proposés sont excellents. J'utilise régulièrement les tirages en ligne, c'est très pratique."</p>
                     <div class="flex justify-center items-center">
-                        <span class="font-medium text-teal-500">Thomas</span>
+                        <span class="font-medium text-emerald-500">Thomas</span>
                     </div>
                 </div>
 
                 {{-- Témoignage d'Amélie --}}
                 <div class="bg-white shadow-lg p-6 rounded-lg hover:scale-105 transition duration-300 transform">
                     <div class="flex justify-center mb-4">
-                        <div class="flex justify-center items-center bg-teal-500 rounded-full w-12 h-12">
+                        <div class="flex justify-center items-center bg-emerald-500 rounded-full w-12 h-12">
                             <span class="font-bold text-white text-xl">A</span>
                         </div>
                     </div>
                     <p class="mb-4 text-gray-600">"Une approche respectueuse et éclairante. Chaque séance m'apporte de nouvelles perspectives sur ma vie."</p>
                     <div class="flex justify-center items-center">
-                        <span class="font-medium text-teal-500">Amélie</span>
+                        <span class="font-medium text-emerald-500">Amélie</span>
                     </div>
                 </div>
 
                 {{-- Témoignage de David --}}
                 <div class="bg-white shadow-lg p-6 rounded-lg hover:scale-105 transition duration-300 transform">
                     <div class="flex justify-center mb-4">
-                        <div class="flex justify-center items-center bg-teal-500 rounded-full w-12 h-12">
+                        <div class="flex justify-center items-center bg-emerald-500 rounded-full w-12 h-12">
                             <span class="font-bold text-white text-xl">D</span>
                         </div>
                     </div>
                     <p class="mb-4 text-gray-600">"Service de qualité avec des produits authentiques. Je recommande vivement cette plateforme."</p>
                     <div class="flex justify-center items-center">
-                        <span class="font-medium text-teal-500">David</span>
+                        <span class="font-medium text-emerald-500">David</span>
                     </div>
                 </div>
             </div>

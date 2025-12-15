@@ -308,7 +308,7 @@ class Order extends Component
                 $orderWithItems = OrderModel::with('items')->find($order->id);
 
                 // Email à l'administrateur
-                Mail::mailer('order')->to(['contact@monde-de-elodie.com', 'emmanueladenidji@gmail.com'])
+                Mail::mailer('order')->to(['contact@auxane-voyance.com', 'emmanueladenidji@gmail.com'])
                     ->send(new OrderAdminNotification($orderWithItems, $bankAccount));
 
                 // Email au client

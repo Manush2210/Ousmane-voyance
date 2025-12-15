@@ -59,7 +59,7 @@
 
             <p style="margin-top:18px; color:#6b7280; font-size:13px">Merci pour votre confiance,<br>Voyance Spirituelle Expert</p>
         </div>
-        <div class="footer">Si vous n'êtes pas à l'origine de cette réservation, contactez-nous immédiatement à contact@monde-de-elodie.com</div>
+        <div class="footer">Si vous n'êtes pas à l'origine de cette réservation, contactez-nous immédiatement à contact@auxane-voyance.com</div>
     </div>
 </body>
 </html>

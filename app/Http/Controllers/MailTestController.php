@@ -24,7 +24,7 @@ class MailTestController extends Controller
             // Essayer d'envoyer un email simple
             Mail::raw('Ceci est un test de l\'envoi d\'email.', function ($message) {
                 $message->from(config('mail.from.address'), config('mail.from.name'));
-                $message->to('contact@monde-de-elodie.com');
+                $message->to('contact@auxane-voyance.com');
                 $message->subject('Test d\'envoi d\'email');
             });
 
