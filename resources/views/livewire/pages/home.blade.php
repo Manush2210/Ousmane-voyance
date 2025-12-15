@@ -27,14 +27,14 @@
                 <!-- Colonne des fonctionnalités -->
                 <div class="space-y-8">
                     <div>
-                        <h3 class="mb-4 font-bold text-emerald-700 text-2xl">Ce que notre plateforme vous réserve :</h3>
-                        <p class="text-gray-700 leading-relaxed">
+                        <h3 class="mb-4 font-bold text-emerald-700 text-2xl text-center">Ce que notre plateforme vous réserve </h3>
+                        <p class="text-gray-700 leading-relaxed text-center md:text-left">
                             Nous avons créé un espace sécurisé et bienveillant pour vous offrir des outils de guidance
                             clairs et des ressources exclusives. Naviguez avec simplicité et trouvez les réponses que
                             vous cherchez.
                         </p>
                     </div>
-                    <div class="mt-10">
+                    <div class="mt-10 flex justify-center md:justify-start">
                         <a href="{{ route('meeting') }}"
                             class="inline-block inline-flex items-center gap-3 bg-emerald-600 hover:bg-emerald-700 shadow-lg px-8 py-3 rounded-lg font-bold text-white transition-all hover:-translate-y-1 duration-300 transform">
                             <svg class="w-5 h-5 text-white animate-bounce" xmlns="http://www.w3.org/2000/svg"
