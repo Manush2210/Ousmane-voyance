@@ -45,6 +45,7 @@ class ContactMailable extends Mailable
             from: new Address(env('MAIL_FROM_ADDRESS', 'contact@auxane-voyance.com'), env('MAIL_FROM_NAME', 'Contact')),
             replyTo: [new Address($this->email)],
             subject: 'Formulaire de contact - Voyance Spirituelle Expert',
+        
         );
     }
 

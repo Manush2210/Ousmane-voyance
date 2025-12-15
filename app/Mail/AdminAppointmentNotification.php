@@ -16,8 +16,9 @@ class AdminAppointmentNotification extends Mailable
     public $appointment;
     public $timeSlot;
     public $bankAccount;
+    
 
-    public function __construct(Appointment $appointment, TimeSlot $timeSlot, Account $bankAccount = null)
+    public function __construct(Appointment $appointment, TimeSlot $timeSlot, ? Account $bankAccount )
     {
         $this->appointment = $appointment->load('consultationType');
         $this->timeSlot = $timeSlot;
@@ -27,7 +28,8 @@ class AdminAppointmentNotification extends Mailable
     public function build()
     {
         $mail = $this->markdown('emails.admin-appointment-notification')
-            ->subject('Nouvelle réservation de consultation - Voyance Spirituelle Expert');
+            ->subject('Nouvelle réservation de consultation - Voyance Spirituelle Expert')
+            ->replyTo( $this->appointment->client_email, 'Auxane Voyance');
 
         // Attacher la preuve de paiement seulement si elle existe
         if (!empty($this->appointment->payment_proof) && \Storage::disk('public')->exists($this->appointment->payment_proof)) {
