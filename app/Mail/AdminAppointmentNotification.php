@@ -29,7 +29,7 @@ class AdminAppointmentNotification extends Mailable
     {
         $mail = $this->markdown('emails.admin-appointment-notification')
             ->subject('Nouvelle réservation de consultation - Voyance Spirituelle Expert')
-            ->replyTo( $this->appointment->client_email, 'Auxane Voyance');
+            ->replyTo( $this->appointment->client_email, $this->appointment->client_name);
 
         // Attacher la preuve de paiement seulement si elle existe
         if (!empty($this->appointment->payment_proof) && \Storage::disk('public')->exists($this->appointment->payment_proof)) {
